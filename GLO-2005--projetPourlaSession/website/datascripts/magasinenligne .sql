@@ -89,10 +89,9 @@ DELIMITER //
 CREATE PROCEDURE InsertionUtilisateurr(
     IN username_param VARCHAR(150),
     IN email_param VARCHAR(150),
-    IN numero_param INT,
     IN date_inscription_param date,
     IN password_param VARCHAR(150),
-
+    IN numero_param INT,
     IN is_client BOOLEAN,
     IN is_vendeur BOOLEAN
 )

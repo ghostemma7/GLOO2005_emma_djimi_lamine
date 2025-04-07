@@ -1,22 +1,12 @@
 from faker import Faker
 import random
-from dotenv import load_dotenv
-import pymysql
-import os
-import datetime
-from user_seeder import generate_produits, generate_clients
+from produit import connection
+import random
+from faker import Faker
+from produit import generate_produits
+from user_seeder import generate_clients
 
-load_dotenv()
 
-connection = pymysql.connect(
-    host=os.getenv('DB_HOST'),
-    user=os.getenv('DB_USERNAME'),
-    password=os.getenv('DB_PASSWORD'),
-    db=os.getenv('DB_DATABASE'),
-    port=int(os.getenv('DB_PORT')),
-    autocommit=True,
-    cursorclass=pymysql.cursors.DictCursor
-)
 
 def insert_random_commande(connection, commande):
     cursor = connection.cursor()
