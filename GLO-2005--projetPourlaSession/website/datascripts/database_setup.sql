@@ -1,3 +1,3 @@
 
-DROP DATABASE magasinenligne;
-CREATE DATABASE magasinenligne;
+DROP DATABASE magasinenligne1;
+CREATE DATABASE magasinenligne1;
