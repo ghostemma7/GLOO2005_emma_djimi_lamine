@@ -15,10 +15,9 @@ connection = pymysql.connect(
     autocommit=True,
     cursorclass=pymysql.cursors.DictCursor
 )
-fake = Faker()
-
 
 def generate_produits(connection, nb_produits):
+    fake = Faker()
     produits_ids = []
     categories = ["Jouets", "Livres"]
     cursor = connection.cursor()
