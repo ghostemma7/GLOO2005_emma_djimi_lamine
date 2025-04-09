@@ -185,3 +185,6 @@ def select_clients():
     cursor.execute(query)
     clients = cursor.fetchall()
     return clients
+
+if __name__ == '__main__':
+    select_user()
