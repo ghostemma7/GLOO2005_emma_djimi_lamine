@@ -1,6 +1,11 @@
+'''from dotenv import load_dotenv
+load_dotenv()'''
 from flask import Flask, render_template, request, redirect, url_for, session, flash
 import pymysql
 from datetime import date
+
+from dotenv import load_dotenv
+load_dotenv()
 
 app = Flask(__name__)
 app.secret_key = "mag-2005"
@@ -9,8 +14,8 @@ app.secret_key = "mag-2005"
 conn = pymysql.connect(
     host='localhost',
     user='root',
-    password='',
-    db='magasinenligne1',
+    password='Ntd.197238b',
+    db='magasinenligne',
     cursorclass=pymysql.cursors.DictCursor
 )
 
@@ -106,6 +111,29 @@ def jouets():
         """)
         jouets = cursor.fetchall()
     return render_template('jouets.html', jouets=jouets)
+
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        date_inscription = date.today()
+
+        try:
+            with conn.cursor() as cursor:
+                cursor.execute(
+                    "INSERT INTO Utilisateurs (username, email, password, date_inscription) VALUES (%s, %s, %s, %s)",
+                    (username, email, password, date_inscription)
+                )
+            conn.commit()
+            flash("Inscription réussie ! Vous pouvez maintenant vous connecter.")
+            return redirect(url_for('login'))
+        except Exception as e:
+            conn.rollback()
+            flash(f"Erreur lors de l'inscription : {str(e)}")
+
+    return render_template('register.html')
 
 
 if __name__ == '__main__':

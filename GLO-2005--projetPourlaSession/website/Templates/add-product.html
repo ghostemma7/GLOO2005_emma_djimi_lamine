@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un produit</title>
+</head>
+<body>
+    <h2>Ajouter un produit</h2>
+    <form action="/add_product" method="post">
+        <label for="nomProduits">Nom du produit :</label>
+        <input type="text" name="nomProduits" required><br><br>
+
+        <label for="prixProduit">Prix :</label>
+        <input type="number" step="0.01" name="prixProduit" required><br><br>
+
+        <label for="descriptions">Description :</label><br>
+        <textarea name="descriptions" rows="4" cols="50" required></textarea><br><br>
+
+        <label>Catégorie :</label><br>
+        <input type="radio" name="categorie" value="livre" required> Livre<br>
+        <input type="radio" name="categorie" value="jouet" required> Jouet<br><br>
+
+        <input type="submit" value="Ajouter le produit">
+    </form>
+    <br>
+    <a href="/home">Retour à l’accueil</a>
+</body>
+</html>
