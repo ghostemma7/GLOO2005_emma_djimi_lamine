@@ -1,8 +1,14 @@
 '''from dotenv import load_dotenv
 load_dotenv()'''
 from flask import Flask, render_template, request, redirect, url_for, session, flash
+#from user_model import User
+import json
+from flask_login import login_required, current_user
+#from shared_resources import login_manager 
+#from auth import auth
 import pymysql
 from datetime import date
+
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -18,6 +24,20 @@ conn = pymysql.connect(
     db='magasinenligne',
     cursorclass=pymysql.cursors.DictCursor
 )
+
+'''from database import connection, insert_Client, insert_vendeur, insert_Utilisateurs, select_user, select_livre, \
+    select_Livre_by_id, select_jouet_by_id, select_Jouets, select_clients, search_users_by_query, select_user_by_email, \
+    select_user_by_id, select_user_by_username, select_users_by_role, select_vendeur_name_by_jouet_id, select_vendeurs, \
+    edit_jouet_by_id, edit_livre_by_id, edit_user_by_id, delete_jouet_by_id, delete_user_by_id, search_users_by_query
+
+app = Flask(__name__)
+#app.secret_key = "mag-2005"
+app.register_blueprint(auth, url_prefix="/")
+app.config['DB_CONNECTION'] = connection
+app.config['SECRET_KEY'] = 'Ntd.197238b'
+#login_manager.login_view = 'auth.login'
+#login_manager.init_app(app)
+'''
 
 
 @app.route('/')
