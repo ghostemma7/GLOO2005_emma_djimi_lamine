@@ -1,7 +1,7 @@
 from faker import Faker
 import random
 from werkzeug.security import generate_password_hash
-from produit import connection
+from seeders.produits import connection
 
 import random
 from faker import Faker

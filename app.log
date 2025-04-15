@@ -412,3 +412,51 @@
 2025-04-15 03:38:09,850 - INFO - 127.0.0.1 - - [15/Apr/2025 03:38:09] "[32mGET /produits HTTP/1.1[0m" 302 -
 2025-04-15 03:38:09,857 - INFO - 127.0.0.1 - - [15/Apr/2025 03:38:09] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
 2025-04-15 03:38:09,892 - INFO - 127.0.0.1 - - [15/Apr/2025 03:38:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:08:11,375 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 09:08:11,498 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 09:08:11,559 - INFO -  * Restarting with stat
+2025-04-15 09:08:13,320 - WARNING -  * Debugger is active!
+2025-04-15 09:08:13,334 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 09:08:26,746 - INFO - 127.0.0.1 - - [15/Apr/2025 09:08:26] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 09:08:26,947 - INFO - 127.0.0.1 - - [15/Apr/2025 09:08:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:08:35,650 - INFO - 127.0.0.1 - - [15/Apr/2025 09:08:35] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 09:08:35,660 - INFO - 127.0.0.1 - - [15/Apr/2025 09:08:35] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 09:08:35,713 - INFO - 127.0.0.1 - - [15/Apr/2025 09:08:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:12:33,897 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 09:12:33,966 - INFO -  * Restarting with stat
+2025-04-15 09:19:16,193 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 09:19:16,195 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 09:19:16,201 - INFO -  * Restarting with stat
+2025-04-15 09:19:17,043 - WARNING -  * Debugger is active!
+2025-04-15 09:19:17,051 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 09:19:17,198 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:17] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 09:19:17,473 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:19:22,551 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:22] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 09:19:30,881 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:30] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 09:19:30,912 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:19:35,420 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:35] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 09:19:39,347 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:39] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 09:19:39,357 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:39] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 09:19:39,408 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:19:43,882 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:43] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 09:19:43,893 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:43] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 09:19:43,951 - INFO - 127.0.0.1 - - [15/Apr/2025 09:19:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:20:03,629 - INFO - 127.0.0.1 - - [15/Apr/2025 09:20:03] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 09:20:26,640 - INFO - Connexion à la DB établie avec succès
+2025-04-15 09:20:26,646 - INFO - 127.0.0.1 - - [15/Apr/2025 09:20:26] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 09:21:01,391 - INFO - 127.0.0.1 - - [15/Apr/2025 09:21:01] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 09:23:51,887 - INFO - Connexion à la DB établie avec succès
+2025-04-15 09:23:51,896 - INFO - 127.0.0.1 - - [15/Apr/2025 09:23:51] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 09:24:00,028 - INFO - 127.0.0.1 - - [15/Apr/2025 09:24:00] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 09:24:04,491 - INFO - 127.0.0.1 - - [15/Apr/2025 09:24:04] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 09:24:09,249 - INFO - 127.0.0.1 - - [15/Apr/2025 09:24:09] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 09:24:09,257 - INFO - 127.0.0.1 - - [15/Apr/2025 09:24:09] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 09:24:09,313 - INFO - 127.0.0.1 - - [15/Apr/2025 09:24:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:24:15,740 - INFO - 127.0.0.1 - - [15/Apr/2025 09:24:15] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 09:24:15,750 - INFO - 127.0.0.1 - - [15/Apr/2025 09:24:15] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 09:24:15,810 - INFO - 127.0.0.1 - - [15/Apr/2025 09:24:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:29:12,071 - INFO - 127.0.0.1 - - [15/Apr/2025 09:29:12] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 09:29:12,084 - INFO - 127.0.0.1 - - [15/Apr/2025 09:29:12] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 09:29:12,139 - INFO - 127.0.0.1 - - [15/Apr/2025 09:29:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

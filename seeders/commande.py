@@ -1,9 +1,9 @@
 from faker import Faker
 import random
-from produit import connection
+from seeders.produits import connection
 import random
 from faker import Faker
-from produit import generate_produits
+from seeders.produits import generate_produits
 from user_seeder import generate_clients
 
 
