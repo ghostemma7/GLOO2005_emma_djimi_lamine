@@ -1,0 +1,18 @@
+--premier page pour info sur le magasin--
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Accueil</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body class="default-background">
+    <h1>Bienvenue {{ session['username'] }} !</h1>
+    {% if session['role'] == 'Vendeur' %}
+        <a href="/add_product">Ajouter un produit</a>
+    {% endif %}
+    <br><br>
+    <a href="/logout">Se déconnecter</a>
+</body>
+</html>

@@ -1,0 +1,87 @@
+2025-04-15 00:25:30,965 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 00:25:30,966 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 00:25:30,994 - INFO -  * Restarting with stat
+2025-04-15 00:25:32,367 - WARNING -  * Debugger is active!
+2025-04-15 00:25:32,380 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 00:26:14,686 - INFO - 127.0.0.1 - - [15/Apr/2025 00:26:14] "GET / HTTP/1.1" 200 -
+2025-04-15 00:26:14,909 - INFO - 127.0.0.1 - - [15/Apr/2025 00:26:14] "[35m[1mGET /static/app.js HTTP/1.1[0m" 500 -
+2025-04-15 00:26:15,195 - INFO - 127.0.0.1 - - [15/Apr/2025 00:26:15] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 00:26:15,231 - INFO - 127.0.0.1 - - [15/Apr/2025 00:26:15] "[36mGET /static/store.png HTTP/1.1[0m" 304 -
+2025-04-15 00:27:15,863 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:15] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 00:27:16,017 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:16] "GET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 00:27:16,058 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:16] "GET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 00:27:16,131 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:16] "GET /produits?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 00:27:16,148 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:16] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=VvAPHnfZ8CZXD8KZVDBk HTTP/1.1" 200 -
+2025-04-15 00:27:27,625 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:27] "[35m[1mGET /static/favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:27:27,729 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:27] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:27:29,992 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:29] "GET /login HTTP/1.1" 200 -
+2025-04-15 00:27:30,083 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:30] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 00:27:30,196 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:30] "GET /static/image2.jpg HTTP/1.1" 200 -
+2025-04-15 00:27:48,685 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:48] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:27:48,791 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:48] "[35m[1mGET /static/favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:27:51,250 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:51] "GET /register HTTP/1.1" 200 -
+2025-04-15 00:27:51,314 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:51] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 00:27:51,354 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:51] "GET /static/image2.jpg HTTP/1.1" 200 -
+2025-04-15 00:27:51,401 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:51] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:27:55,408 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:55] "[35m[1mGET /static/favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:27:57,413 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:57] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 00:27:57,552 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:57] "GET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 00:27:57,568 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:57] "[36mGET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 00:27:57,621 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:57] "GET /produits?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 00:27:57,636 - INFO - 127.0.0.1 - - [15/Apr/2025 00:27:57] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=VvAPHnfZ8CZXD8KZVDBk HTTP/1.1" 200 -
+2025-04-15 00:28:00,729 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:00] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:28:00,826 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:00] "[35m[1mGET /static/favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:28:02,944 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:02] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-04-15 00:28:03,017 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:03] "GET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 00:28:03,030 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:03] "GET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 00:28:03,054 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:03] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 00:28:03,072 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:03] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=VvAPHnfZ8CZXD8KZVDBk HTTP/1.1" 200 -
+2025-04-15 00:28:11,126 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:11] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:28:11,197 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:11] "[35m[1mGET /static/favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:28:13,253 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:13] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 00:28:13,359 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:13] "[36mGET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 00:28:13,361 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:13] "GET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 00:28:13,443 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:13] "GET /produits?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 00:28:13,450 - INFO - 127.0.0.1 - - [15/Apr/2025 00:28:13] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=VvAPHnfZ8CZXD8KZVDBk HTTP/1.1" 200 -
+2025-04-15 00:34:15,675 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 00:34:15,677 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 00:34:15,681 - INFO -  * Restarting with stat
+2025-04-15 00:34:16,901 - WARNING -  * Debugger is active!
+2025-04-15 00:34:16,913 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 00:34:41,756 - INFO - 127.0.0.1 - - [15/Apr/2025 00:34:41] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-04-15 00:34:42,262 - INFO - 127.0.0.1 - - [15/Apr/2025 00:34:42] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 00:34:42,300 - INFO - 127.0.0.1 - - [15/Apr/2025 00:34:42] "GET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 00:34:42,320 - INFO - 127.0.0.1 - - [15/Apr/2025 00:34:42] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 00:34:42,333 - INFO - 127.0.0.1 - - [15/Apr/2025 00:34:42] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=SD29BYUAFZAJoW8qr8zZ HTTP/1.1" 200 -
+2025-04-15 00:38:26,981 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 00:38:26,982 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 00:38:26,986 - INFO -  * Restarting with stat
+2025-04-15 00:38:27,787 - WARNING -  * Debugger is active!
+2025-04-15 00:38:27,800 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 00:38:43,191 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:43] "[35m[1mGET /dashboard HTTP/1.1[0m" 500 -
+2025-04-15 00:38:43,663 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:43] "[36mGET /dashboard?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 00:38:43,697 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:43] "GET /dashboard?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 00:38:43,721 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:43] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 00:38:43,728 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:43] "GET /dashboard?__debugger__=yes&cmd=resource&f=console.png&s=e3t2R1psFeJD3brtipIt HTTP/1.1" 200 -
+2025-04-15 00:38:47,337 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:47] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:38:47,396 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:47] "[35m[1mGET /static/favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:38:50,692 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:50] "GET /login HTTP/1.1" 200 -
+2025-04-15 00:38:50,763 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:50] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 00:38:50,812 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:50] "GET /static/image2.jpg HTTP/1.1" 200 -
+2025-04-15 00:38:58,744 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:58] "GET /register HTTP/1.1" 200 -
+2025-04-15 00:38:58,814 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:58] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 00:38:58,893 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:58] "GET /static/image2.jpg HTTP/1.1" 200 -
+2025-04-15 00:38:58,928 - INFO - 127.0.0.1 - - [15/Apr/2025 00:38:58] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:39:20,900 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:20] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:39:25,681 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:25] "GET /register HTTP/1.1" 200 -
+2025-04-15 00:39:25,900 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:25] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 00:39:26,011 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:26] "GET /static/image2.jpg HTTP/1.1" 200 -
+2025-04-15 00:39:28,889 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:28] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:39:30,480 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:30] "[35m[1mGET /static/favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 00:39:32,697 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:32] "GET /register HTTP/1.1" 200 -
+2025-04-15 00:39:32,755 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:32] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 00:39:32,789 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:32] "GET /static/image2.jpg HTTP/1.1" 200 -
+2025-04-15 00:39:32,828 - INFO - 127.0.0.1 - - [15/Apr/2025 00:39:32] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -

@@ -1,0 +1,40 @@
+--inscription--
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Liste des produits</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body class="default-background">
+    <h1>Nos Produits</h1>
+    
+    {% if produits %}
+        <ul>
+        {% for produit in produits %}
+            <li>
+                <strong>{{ produit['nomProduits'] }}</strong><br>
+                Prix : {{ produit['prixProduit'] }} €<br>
+                Description : {{ produit['descriptions'] }}<br>
+                Type : {{ produit['role'] }}<br>
+
+                {% if session['role'] == 'Client' %}
+                    <form action="/commander/{{ produit['idProduit'] }}" method="post" style="margin-top: 10px;">
+                        <label for="quantite">Quantité :</label>
+                        <input type="number" name="quantite" value="1" min="1" required>
+                        <input type="submit" value="Commander">
+                    </form>
+                {% endif %}
+            </li>
+            <hr>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun produit disponible.</p>
+    {% endif %}
+
+    <br><a href="/home">Retour à l’accueil</a>
+</body>
+</html>
