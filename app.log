@@ -460,3 +460,52 @@
 2025-04-15 09:29:12,071 - INFO - 127.0.0.1 - - [15/Apr/2025 09:29:12] "[32mGET /home HTTP/1.1[0m" 302 -
 2025-04-15 09:29:12,084 - INFO - 127.0.0.1 - - [15/Apr/2025 09:29:12] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
 2025-04-15 09:29:12,139 - INFO - 127.0.0.1 - - [15/Apr/2025 09:29:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:44:16,978 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 09:44:16,979 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 09:44:16,981 - INFO -  * Restarting with stat
+2025-04-15 09:44:17,576 - WARNING -  * Debugger is active!
+2025-04-15 09:44:17,582 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 09:44:32,126 - INFO - 127.0.0.1 - - [15/Apr/2025 09:44:32] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 09:44:32,328 - INFO - 127.0.0.1 - - [15/Apr/2025 09:44:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:44:32,335 - INFO - 127.0.0.1 - - [15/Apr/2025 09:44:32] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 09:44:47,106 - INFO - 127.0.0.1 - - [15/Apr/2025 09:44:47] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 09:44:47,149 - INFO - 127.0.0.1 - - [15/Apr/2025 09:44:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:44:56,725 - INFO - 127.0.0.1 - - [15/Apr/2025 09:44:56] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 09:46:23,410 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:23] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 09:46:23,419 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:23] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 09:46:23,474 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:46:39,593 - INFO - Connexion à la DB établie avec succès
+2025-04-15 09:46:39,597 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 09:46:39,598 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:39] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 09:46:39,650 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:46:44,108 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:44] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 09:46:55,643 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:55] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 09:46:55,651 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:55] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 09:46:55,700 - INFO - 127.0.0.1 - - [15/Apr/2025 09:46:55] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:49:27,143 - INFO - 127.0.0.1 - - [15/Apr/2025 09:49:27] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 09:49:27,184 - INFO - 127.0.0.1 - - [15/Apr/2025 09:49:27] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:49:34,082 - INFO - 127.0.0.1 - - [15/Apr/2025 09:49:34] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 09:49:34,093 - INFO - 127.0.0.1 - - [15/Apr/2025 09:49:34] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 09:49:34,145 - INFO - 127.0.0.1 - - [15/Apr/2025 09:49:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:49:48,106 - INFO - 127.0.0.1 - - [15/Apr/2025 09:49:48] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 09:49:48,115 - INFO - 127.0.0.1 - - [15/Apr/2025 09:49:48] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 09:49:48,161 - INFO - 127.0.0.1 - - [15/Apr/2025 09:49:48] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:49:50,757 - INFO - 127.0.0.1 - - [15/Apr/2025 09:49:50] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 09:56:04,580 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 09:56:04,674 - INFO -  * Restarting with stat
+2025-04-15 09:57:20,755 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 09:57:20,758 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 09:57:20,761 - INFO -  * Restarting with stat
+2025-04-15 09:57:21,460 - WARNING -  * Debugger is active!
+2025-04-15 09:57:21,469 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 09:57:27,980 - INFO - 127.0.0.1 - - [15/Apr/2025 09:57:27] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 09:57:28,199 - INFO - 127.0.0.1 - - [15/Apr/2025 09:57:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:57:28,211 - INFO - 127.0.0.1 - - [15/Apr/2025 09:57:28] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 09:57:32,927 - INFO - Connexion à la DB établie avec succès
+2025-04-15 09:57:32,941 - INFO - 127.0.0.1 - - [15/Apr/2025 09:57:32] "GET /produits HTTP/1.1" 200 -
+2025-04-15 09:57:32,973 - INFO - 127.0.0.1 - - [15/Apr/2025 09:57:32] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 09:57:36,739 - INFO - 127.0.0.1 - - [15/Apr/2025 09:57:36] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 09:57:36,749 - INFO - 127.0.0.1 - - [15/Apr/2025 09:57:36] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 09:57:36,787 - INFO - 127.0.0.1 - - [15/Apr/2025 09:57:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -

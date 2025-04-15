@@ -319,7 +319,6 @@ def home():
     return render_template('home.html')
 
 @app.route('/produits')
-@login_required
 def produits():
     conn = get_db_connection()
     if not conn:
@@ -330,38 +329,13 @@ def produits():
             cursor.execute("SELECT * FROM produits")
             produits = cursor.fetchall()
         return render_template('produits.html', produits=produits)
+    except Exception as e:
+        logging.error(f"Erreur SQL dans /produits: {str(e)}")
+        flash("Erreur lors de la récupération des produits.")
+        abort(500)
     finally:
         conn.close()
-        # Conversion en booléen pour la procédure stockée
-        is_jouet = categorie.lower() == 'jouet'
-        is_livre = categorie.lower() == 'livre'
 
-        conn = get_db_connection()
-        if not conn:
-            flash("Erreur de connexion à la base de données.")
-            return render_template('add-product.html')
-
-        try:
-            with conn.cursor() as cursor:
-                cursor.callproc('InsertionProduit', [
-                    nom, 
-                    prix, 
-                    description, 
-                    categorie.capitalize(), 
-                    is_jouet, 
-                    is_livre
-                ])
-                conn.commit()
-                flash("Produit ajouté avec succès !")
-                return redirect(url_for('produits'))
-        except MySQLError as e:
-            conn.rollback()
-            logging.error(f"Erreur SQL: {str(e)}")
-            flash(f"Erreur lors de l'ajout du produit: {str(e)}")
-        finally:
-            conn.close()
-
-    return render_template('add-product.html')
 
 # Gestion des erreurs
 # Remplacer la fonction gestion_erreur existante par :
