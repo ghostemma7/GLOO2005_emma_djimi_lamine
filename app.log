@@ -1,0 +1,414 @@
+2025-04-15 01:06:22,946 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 01:06:22,947 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 01:06:22,951 - INFO -  * Restarting with stat
+2025-04-15 01:06:24,543 - WARNING -  * Debugger is active!
+2025-04-15 01:06:24,560 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 01:06:35,312 - INFO - 127.0.0.1 - - [15/Apr/2025 01:06:35] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 01:06:35,843 - INFO - 127.0.0.1 - - [15/Apr/2025 01:06:35] "GET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 01:06:35,864 - INFO - 127.0.0.1 - - [15/Apr/2025 01:06:35] "GET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 01:06:35,901 - INFO - 127.0.0.1 - - [15/Apr/2025 01:06:35] "GET /produits?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 01:06:35,913 - INFO - 127.0.0.1 - - [15/Apr/2025 01:06:35] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=LDFdXD8TvK8C5heQ2HDQ HTTP/1.1" 200 -
+2025-04-15 01:08:32,365 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 01:08:32,367 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 01:08:32,371 - INFO -  * Restarting with stat
+2025-04-15 01:08:33,430 - WARNING -  * Debugger is active!
+2025-04-15 01:08:33,441 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 01:08:40,724 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:40] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 01:08:41,200 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:41] "GET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 01:08:41,243 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:41] "[36mGET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 01:08:41,263 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:41] "GET /produits?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 01:08:41,273 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:41] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=ToYHrOWsBurHbiHLBylY HTTP/1.1" 200 -
+2025-04-15 01:08:44,322 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:44] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 01:08:44,379 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:44] "[35m[1mGET /static/favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 01:08:52,663 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:52] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 01:08:52,752 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:52] "[36mGET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 01:08:52,763 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:52] "GET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 01:08:52,853 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:52] "GET /produits?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 01:08:52,869 - INFO - 127.0.0.1 - - [15/Apr/2025 01:08:52] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=ToYHrOWsBurHbiHLBylY HTTP/1.1" 200 -
+2025-04-15 01:15:54,338 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 01:15:54,339 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 01:15:54,343 - INFO -  * Restarting with stat
+2025-04-15 01:15:55,435 - WARNING -  * Debugger is active!
+2025-04-15 01:15:55,445 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 01:16:07,009 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:07] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 01:16:07,506 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:07] "GET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 01:16:07,518 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:07] "GET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 01:16:07,553 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:07] "GET /produits?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 01:16:07,558 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:07] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=vFYaTc6OGCQmCYgvQjMH HTTP/1.1" 200 -
+2025-04-15 01:16:12,704 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:12] "[35m[1mGET /favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 01:16:12,787 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:12] "[35m[1mGET /static/favicon.ico HTTP/1.1[0m" 500 -
+2025-04-15 01:16:15,592 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:15] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 01:16:15,670 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:15] "[36mGET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 01:16:15,675 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:15] "[36mGET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 01:16:15,759 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:15] "[36mGET /produits?__debugger__=yes&cmd=resource&f=console.png&s=vFYaTc6OGCQmCYgvQjMH HTTP/1.1[0m" 304 -
+2025-04-15 01:16:29,317 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:29] "GET /register HTTP/1.1" 200 -
+2025-04-15 01:16:29,386 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:29] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 01:16:29,412 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:29] "GET /static/image2.jpg HTTP/1.1" 200 -
+2025-04-15 01:16:32,460 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:32] "[35m[1mGET /home HTTP/1.1[0m" 500 -
+2025-04-15 01:16:32,528 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:32] "GET /home?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 01:16:32,534 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:32] "GET /home?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 01:16:32,594 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:32] "GET /home?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 01:16:32,625 - INFO - 127.0.0.1 - - [15/Apr/2025 01:16:32] "GET /home?__debugger__=yes&cmd=resource&f=console.png&s=vFYaTc6OGCQmCYgvQjMH HTTP/1.1" 200 -
+2025-04-15 01:33:10,454 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 01:33:10,702 - INFO -  * Restarting with stat
+2025-04-15 01:39:28,279 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 01:39:28,281 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 01:39:28,284 - INFO -  * Restarting with stat
+2025-04-15 01:39:30,387 - WARNING -  * Debugger is active!
+2025-04-15 01:39:30,398 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 01:39:51,742 - ERROR - Erreur dans la route accueil: Could not build url for endpoint 'produits'. Did you mean 'mes_produits' instead?
+2025-04-15 01:39:51,892 - INFO - 127.0.0.1 - - [15/Apr/2025 01:39:51] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-15 01:39:54,189 - ERROR - Erreur dans la route accueil: Could not build url for endpoint 'produits'. Did you mean 'mes_produits' instead?
+2025-04-15 01:39:54,289 - INFO - 127.0.0.1 - - [15/Apr/2025 01:39:54] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-15 01:39:55,601 - INFO - 127.0.0.1 - - [15/Apr/2025 01:39:55] "[36mGET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 01:39:55,718 - INFO - 127.0.0.1 - - [15/Apr/2025 01:39:55] "[36mGET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 01:39:55,900 - INFO - 127.0.0.1 - - [15/Apr/2025 01:39:55] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=iIytNSTt4QFRQmzCECqM HTTP/1.1" 200 -
+2025-04-15 01:39:56,001 - INFO - 127.0.0.1 - - [15/Apr/2025 01:39:56] "[36mGET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-15 01:40:36,635 - ERROR - Erreur dans la route accueil: Could not build url for endpoint 'produits'. Did you mean 'mes_produits' instead?
+2025-04-15 01:40:36,700 - INFO - 127.0.0.1 - - [15/Apr/2025 01:40:36] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-15 01:40:36,793 - INFO - 127.0.0.1 - - [15/Apr/2025 01:40:36] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 01:40:36,809 - INFO - 127.0.0.1 - - [15/Apr/2025 01:40:36] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 01:40:36,913 - INFO - 127.0.0.1 - - [15/Apr/2025 01:40:36] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 01:40:36,943 - INFO - 127.0.0.1 - - [15/Apr/2025 01:40:36] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=iIytNSTt4QFRQmzCECqM HTTP/1.1" 200 -
+2025-04-15 01:42:56,164 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 01:42:56,257 - INFO -  * Restarting with stat
+2025-04-15 01:42:56,862 - WARNING -  * Debugger is active!
+2025-04-15 01:42:56,870 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 01:43:05,419 - ERROR - Erreur dans la route accueil: Could not build url for endpoint 'produits'. Did you mean 'mes_produits' instead?
+2025-04-15 01:43:05,421 - INFO - 127.0.0.1 - - [15/Apr/2025 01:43:05] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-15 01:43:21,239 - ERROR - Erreur dans la route accueil: Could not build url for endpoint 'produits'. Did you mean 'mes_produits' instead?
+2025-04-15 01:43:21,240 - INFO - 127.0.0.1 - - [15/Apr/2025 01:43:21] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-15 01:47:33,007 - ERROR - Erreur dans la route accueil: Could not build url for endpoint 'produits'. Did you mean 'mes_produits' instead?
+2025-04-15 01:47:33,008 - INFO - 127.0.0.1 - - [15/Apr/2025 01:47:33] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-15 01:47:38,387 - ERROR - Erreur dans la route accueil: Could not build url for endpoint 'produits'. Did you mean 'mes_produits' instead?
+2025-04-15 01:47:38,388 - INFO - 127.0.0.1 - - [15/Apr/2025 01:47:38] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-04-15 01:57:04,414 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 01:57:04,475 - INFO -  * Restarting with stat
+2025-04-15 01:57:05,144 - WARNING -  * Debugger is active!
+2025-04-15 01:57:05,153 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 01:57:15,233 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 01:57:15,234 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 01:57:15,237 - INFO -  * Restarting with stat
+2025-04-15 01:57:15,802 - WARNING -  * Debugger is active!
+2025-04-15 01:57:15,809 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 01:57:24,405 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:24] "GET / HTTP/1.1" 200 -
+2025-04-15 01:57:24,442 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:24] "[33mGET /static/app.js HTTP/1.1[0m" 404 -
+2025-04-15 01:57:24,608 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 01:57:24,614 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:24] "[36mGET /static/store.png HTTP/1.1[0m" 304 -
+2025-04-15 01:57:28,776 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:28] "[35m[1mGET /tableau-de-bord HTTP/1.1[0m" 500 -
+2025-04-15 01:57:28,813 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:28] "GET /tableau-de-bord?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 01:57:28,829 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:28] "GET /tableau-de-bord?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 01:57:28,844 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:28] "GET /tableau-de-bord?__debugger__=yes&cmd=resource&f=console.png&s=yez24fSp4wnYNdYZbxIN HTTP/1.1" 200 -
+2025-04-15 01:57:28,921 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:28] "GET /tableau-de-bord?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 01:57:54,010 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:54] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 01:57:54,055 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:54] "GET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 01:57:54,063 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:54] "GET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 01:57:54,097 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:54] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=yez24fSp4wnYNdYZbxIN HTTP/1.1" 200 -
+2025-04-15 01:57:54,163 - INFO - 127.0.0.1 - - [15/Apr/2025 01:57:54] "GET /produits?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 01:58:02,161 - INFO - 127.0.0.1 - - [15/Apr/2025 01:58:02] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 01:58:02,193 - INFO - 127.0.0.1 - - [15/Apr/2025 01:58:02] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 01:58:02,212 - INFO - 127.0.0.1 - - [15/Apr/2025 01:58:02] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 01:58:25,379 - INFO - 127.0.0.1 - - [15/Apr/2025 01:58:25] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-04-15 01:58:35,294 - INFO - 127.0.0.1 - - [15/Apr/2025 01:58:35] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 01:58:35,331 - INFO - 127.0.0.1 - - [15/Apr/2025 01:58:35] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 01:58:35,355 - INFO - 127.0.0.1 - - [15/Apr/2025 01:58:35] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:12:11,786 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 02:12:11,787 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 02:12:11,790 - INFO -  * Restarting with stat
+2025-04-15 02:12:12,355 - WARNING -  * Debugger is active!
+2025-04-15 02:12:12,363 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 02:12:19,040 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:19] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 02:12:19,233 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:19] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:12:19,241 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:19] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:12:26,775 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:26] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 02:12:26,817 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:12:26,829 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:26] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:12:31,599 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:31] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 02:12:31,630 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:31] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:12:31,646 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:31] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:12:36,436 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:36] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 02:12:36,463 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:36] "[36mGET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:12:36,478 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:36] "[36mGET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 02:12:36,503 - INFO - 127.0.0.1 - - [15/Apr/2025 02:12:36] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=3krpuQBehlSw7h3ahgPF HTTP/1.1" 200 -
+2025-04-15 02:14:06,986 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:06] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 02:14:07,016 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:07] "[36mGET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:14:07,031 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:07] "[36mGET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 02:14:07,049 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:07] "[36mGET /produits?__debugger__=yes&cmd=resource&f=console.png&s=3krpuQBehlSw7h3ahgPF HTTP/1.1[0m" 304 -
+2025-04-15 02:14:12,994 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:12] "[35m[1mGET /tableau-de-bord HTTP/1.1[0m" 500 -
+2025-04-15 02:14:13,044 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:13] "[36mGET /tableau-de-bord?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:14:13,045 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:13] "[36mGET /tableau-de-bord?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 02:14:13,078 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:13] "GET /tableau-de-bord?__debugger__=yes&cmd=resource&f=console.png&s=3krpuQBehlSw7h3ahgPF HTTP/1.1" 200 -
+2025-04-15 02:14:25,280 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:25] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 02:14:25,315 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:14:25,331 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:25] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:14:35,870 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 02:14:35,971 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:35] "[35m[1mPOST /connexion HTTP/1.1[0m" 500 -
+2025-04-15 02:14:36,052 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:36] "GET /connexion?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 02:14:36,059 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:36] "GET /connexion?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 02:14:36,078 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:36] "GET /connexion?__debugger__=yes&cmd=resource&f=console.png&s=3krpuQBehlSw7h3ahgPF HTTP/1.1" 200 -
+2025-04-15 02:14:36,156 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:36] "GET /connexion?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 02:14:52,074 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:52] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 02:14:52,112 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:14:52,126 - INFO - 127.0.0.1 - - [15/Apr/2025 02:14:52] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:15:33,534 - ERROR - Erreur SQL lors de l'inscription: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 02:15:33,550 - INFO - 127.0.0.1 - - [15/Apr/2025 02:15:33] "[35m[1mPOST /inscription HTTP/1.1[0m" 500 -
+2025-04-15 02:15:33,598 - INFO - 127.0.0.1 - - [15/Apr/2025 02:15:33] "GET /inscription?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-04-15 02:15:33,598 - INFO - 127.0.0.1 - - [15/Apr/2025 02:15:33] "GET /inscription?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-04-15 02:15:33,642 - INFO - 127.0.0.1 - - [15/Apr/2025 02:15:33] "GET /inscription?__debugger__=yes&cmd=resource&f=console.png&s=3krpuQBehlSw7h3ahgPF HTTP/1.1" 200 -
+2025-04-15 02:15:33,712 - INFO - 127.0.0.1 - - [15/Apr/2025 02:15:33] "GET /inscription?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-04-15 02:18:27,135 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 02:18:27,135 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 02:18:27,141 - INFO -  * Restarting with stat
+2025-04-15 02:18:27,826 - WARNING -  * Debugger is active!
+2025-04-15 02:18:27,833 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 02:19:12,446 - ERROR - Erreur de connexion à la base de données: (1045, "Access denied for user 'root'@'localhost' (using password: NO)")
+2025-04-15 02:19:12,466 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:12] "[35m[1mPOST /inscription HTTP/1.1[0m" 500 -
+2025-04-15 02:19:12,738 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:12] "[36mGET /inscription?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 02:19:12,760 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:12] "[36mGET /inscription?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:19:12,781 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:12] "GET /inscription?__debugger__=yes&cmd=resource&f=console.png&s=DXwVEArDp95eUh3ozq7t HTTP/1.1" 200 -
+2025-04-15 02:19:12,848 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:12] "[36mGET /inscription?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 -
+2025-04-15 02:19:24,034 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:24] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 02:19:24,066 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:19:24,085 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:24] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:19:29,985 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:29] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 02:19:30,031 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:30] "[36mGET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:19:30,037 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:30] "[36mGET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 02:19:30,067 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:30] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=DXwVEArDp95eUh3ozq7t HTTP/1.1" 200 -
+2025-04-15 02:19:36,316 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:36] "[35m[1mGET /tableau-de-bord HTTP/1.1[0m" 500 -
+2025-04-15 02:19:36,348 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:36] "[36mGET /tableau-de-bord?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:19:36,366 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:36] "[36mGET /tableau-de-bord?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 02:19:36,379 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:36] "GET /tableau-de-bord?__debugger__=yes&cmd=resource&f=console.png&s=DXwVEArDp95eUh3ozq7t HTTP/1.1" 200 -
+2025-04-15 02:19:41,215 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:41] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 02:19:41,247 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:41] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:19:41,264 - INFO - 127.0.0.1 - - [15/Apr/2025 02:19:41] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:20:27,858 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 02:20:27,978 - INFO -  * Restarting with stat
+2025-04-15 02:20:28,609 - WARNING -  * Debugger is active!
+2025-04-15 02:20:28,616 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 02:20:36,483 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:36] "GET / HTTP/1.1" 200 -
+2025-04-15 02:20:36,517 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:36] "[33mGET /static/app.js HTTP/1.1[0m" 404 -
+2025-04-15 02:20:36,675 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:20:36,683 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:36] "[36mGET /static/store.png HTTP/1.1[0m" 304 -
+2025-04-15 02:20:39,315 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:39] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 02:20:39,360 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:39] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:20:39,372 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:39] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:20:44,287 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:44] "[35m[1mGET /produits HTTP/1.1[0m" 500 -
+2025-04-15 02:20:44,333 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:44] "[36mGET /produits?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:20:44,342 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:44] "[36mGET /produits?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 -
+2025-04-15 02:20:44,371 - INFO - 127.0.0.1 - - [15/Apr/2025 02:20:44] "GET /produits?__debugger__=yes&cmd=resource&f=console.png&s=u7n6aJXz6tJWMaADobr4 HTTP/1.1" 200 -
+2025-04-15 02:22:46,061 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 02:22:46,136 - INFO -  * Restarting with stat
+2025-04-15 02:22:46,839 - WARNING -  * Debugger is active!
+2025-04-15 02:22:46,848 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 02:22:54,285 - INFO - 127.0.0.1 - - [15/Apr/2025 02:22:54] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 02:22:54,312 - INFO - 127.0.0.1 - - [15/Apr/2025 02:22:54] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 02:22:54,506 - INFO - 127.0.0.1 - - [15/Apr/2025 02:22:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:23:17,420 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:17] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 02:23:17,468 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:23:22,479 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:22] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 02:23:22,506 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:22] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:23:22,535 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:22] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:23:28,141 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:28] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 02:23:28,152 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:28] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 02:23:28,205 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:23:28,216 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:28] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:23:45,627 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:45] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 02:23:45,636 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:45] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 02:23:45,685 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:23:52,063 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:52] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 02:23:52,116 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:52] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:23:52,124 - INFO - 127.0.0.1 - - [15/Apr/2025 02:23:52] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:24:25,054 - INFO - Connexion à la DB établie avec succès
+2025-04-15 02:24:25,058 - ERROR - Erreur SQL lors de l'inscription: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 02:24:25,061 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:25] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 02:24:25,091 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:25] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:24:40,836 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:40] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-04-15 02:24:46,964 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:46] "GET / HTTP/1.1" 200 -
+2025-04-15 02:24:46,999 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:46] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:24:47,008 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:47] "[33mGET /static/app.js HTTP/1.1[0m" 404 -
+2025-04-15 02:24:47,019 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:47] "[36mGET /static/store.png HTTP/1.1[0m" 304 -
+2025-04-15 02:24:51,819 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:51] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 02:24:51,853 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:24:59,129 - INFO - 127.0.0.1 - - [15/Apr/2025 02:24:59] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-04-15 02:25:03,213 - INFO - 127.0.0.1 - - [15/Apr/2025 02:25:03] "GET / HTTP/1.1" 200 -
+2025-04-15 02:25:03,253 - INFO - 127.0.0.1 - - [15/Apr/2025 02:25:03] "[33mGET /static/app.js HTTP/1.1[0m" 404 -
+2025-04-15 02:25:03,254 - INFO - 127.0.0.1 - - [15/Apr/2025 02:25:03] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:25:05,758 - INFO - 127.0.0.1 - - [15/Apr/2025 02:25:05] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 02:25:05,769 - INFO - 127.0.0.1 - - [15/Apr/2025 02:25:05] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 02:25:05,819 - INFO - 127.0.0.1 - - [15/Apr/2025 02:25:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:25:05,829 - INFO - 127.0.0.1 - - [15/Apr/2025 02:25:05] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:54:57,339 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 02:54:57,434 - INFO -  * Restarting with stat
+2025-04-15 02:54:58,221 - WARNING -  * Debugger is active!
+2025-04-15 02:54:58,230 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 02:56:24,184 - INFO - 127.0.0.1 - - [15/Apr/2025 02:56:24] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 02:56:24,376 - INFO - 127.0.0.1 - - [15/Apr/2025 02:56:24] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:56:24,384 - INFO - 127.0.0.1 - - [15/Apr/2025 02:56:24] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:56:30,227 - INFO - 127.0.0.1 - - [15/Apr/2025 02:56:30] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 02:56:30,275 - INFO - 127.0.0.1 - - [15/Apr/2025 02:56:30] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:56:30,283 - INFO - 127.0.0.1 - - [15/Apr/2025 02:56:30] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:56:44,678 - INFO - Connexion à la DB établie avec succès
+2025-04-15 02:56:44,680 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 02:56:44,682 - INFO - 127.0.0.1 - - [15/Apr/2025 02:56:44] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 02:56:44,715 - INFO - 127.0.0.1 - - [15/Apr/2025 02:56:44] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:57:00,886 - INFO - Connexion à la DB établie avec succès
+2025-04-15 02:57:00,891 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 02:57:00,895 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:00] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 02:57:00,933 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:00] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:57:11,361 - INFO - Connexion à la DB établie avec succès
+2025-04-15 02:57:11,365 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 02:57:11,367 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:11] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 02:57:11,399 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:57:14,306 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:14] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 02:57:20,320 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:20] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 02:57:20,349 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:20] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:57:20,370 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:20] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:57:29,252 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:29] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 02:57:29,262 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:29] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 02:57:29,298 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:57:29,319 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:29] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 02:57:43,831 - INFO - Connexion à la DB établie avec succès
+2025-04-15 02:57:43,835 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 02:57:43,838 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:43] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 02:57:43,893 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:43] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:57:51,774 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:51] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 02:57:51,785 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:51] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 02:57:51,820 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:57:57,464 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:57] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 02:57:57,473 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:57] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 02:57:57,514 - INFO - 127.0.0.1 - - [15/Apr/2025 02:57:57] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:58:53,715 - INFO - 127.0.0.1 - - [15/Apr/2025 02:58:53] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 02:58:53,726 - INFO - 127.0.0.1 - - [15/Apr/2025 02:58:53] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 02:58:53,772 - INFO - 127.0.0.1 - - [15/Apr/2025 02:58:53] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:59:09,469 - INFO - Connexion à la DB établie avec succès
+2025-04-15 02:59:09,477 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 02:59:09,482 - INFO - 127.0.0.1 - - [15/Apr/2025 02:59:09] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 02:59:09,532 - INFO - 127.0.0.1 - - [15/Apr/2025 02:59:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 02:59:17,693 - INFO - Connexion à la DB établie avec succès
+2025-04-15 02:59:17,700 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 02:59:17,703 - INFO - 127.0.0.1 - - [15/Apr/2025 02:59:17] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 02:59:17,744 - INFO - 127.0.0.1 - - [15/Apr/2025 02:59:17] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:04:30,682 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 03:04:30,769 - INFO -  * Restarting with stat
+2025-04-15 03:04:31,382 - WARNING -  * Debugger is active!
+2025-04-15 03:04:31,389 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 03:04:51,122 - INFO - Connexion à la DB établie avec succès
+2025-04-15 03:04:51,127 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 03:04:51,141 - INFO - 127.0.0.1 - - [15/Apr/2025 03:04:51] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 03:04:51,341 - INFO - 127.0.0.1 - - [15/Apr/2025 03:04:51] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:04:51,350 - INFO - 127.0.0.1 - - [15/Apr/2025 03:04:51] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 03:05:04,218 - INFO - 127.0.0.1 - - [15/Apr/2025 03:05:04] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 03:05:04,301 - INFO - 127.0.0.1 - - [15/Apr/2025 03:05:04] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:05:04,416 - INFO - 127.0.0.1 - - [15/Apr/2025 03:05:04] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 03:05:47,166 - INFO - Connexion à la DB établie avec succès
+2025-04-15 03:05:47,169 - ERROR - Erreur SQL lors de l'inscription: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 03:05:47,171 - INFO - 127.0.0.1 - - [15/Apr/2025 03:05:47] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 03:05:47,205 - INFO - 127.0.0.1 - - [15/Apr/2025 03:05:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:09:20,835 - INFO - 127.0.0.1 - - [15/Apr/2025 03:09:20] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-04-15 03:09:25,644 - INFO - 127.0.0.1 - - [15/Apr/2025 03:09:25] "GET / HTTP/1.1" 200 -
+2025-04-15 03:09:25,677 - INFO - 127.0.0.1 - - [15/Apr/2025 03:09:25] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 03:09:25,678 - INFO - 127.0.0.1 - - [15/Apr/2025 03:09:25] "[33mGET /static/app.js HTTP/1.1[0m" 404 -
+2025-04-15 03:09:25,696 - INFO - 127.0.0.1 - - [15/Apr/2025 03:09:25] "[36mGET /static/store.png HTTP/1.1[0m" 304 -
+2025-04-15 03:09:29,114 - INFO - 127.0.0.1 - - [15/Apr/2025 03:09:29] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 03:09:29,128 - INFO - 127.0.0.1 - - [15/Apr/2025 03:09:29] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 03:09:29,172 - INFO - 127.0.0.1 - - [15/Apr/2025 03:09:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:10:54,856 - INFO - 127.0.0.1 - - [15/Apr/2025 03:10:54] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 03:10:54,890 - INFO - 127.0.0.1 - - [15/Apr/2025 03:10:54] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:11:53,022 - INFO - 127.0.0.1 - - [15/Apr/2025 03:11:53] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 03:11:53,057 - INFO - 127.0.0.1 - - [15/Apr/2025 03:11:53] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 03:11:53,075 - INFO - 127.0.0.1 - - [15/Apr/2025 03:11:53] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 03:12:26,884 - INFO - Connexion à la DB établie avec succès
+2025-04-15 03:12:26,887 - ERROR - Erreur SQL lors de l'inscription: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 03:12:26,889 - INFO - 127.0.0.1 - - [15/Apr/2025 03:12:26] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 03:12:26,915 - INFO - 127.0.0.1 - - [15/Apr/2025 03:12:26] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:15:33,797 - INFO -  * Detected change in 'c:\\Users\\Propriétaire\\Documents\\SQL\\GLOO2005_emma_djimi_lamine\\GLO-2005--projetPourlaSession\\website\\server.py', reloading
+2025-04-15 03:15:33,893 - INFO -  * Restarting with stat
+2025-04-15 03:16:56,669 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 03:16:56,669 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 03:16:56,672 - INFO -  * Restarting with stat
+2025-04-15 03:16:57,352 - WARNING -  * Debugger is active!
+2025-04-15 03:16:57,359 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 03:17:08,303 - INFO - Connexion à la DB établie avec succès
+2025-04-15 03:17:08,319 - INFO - 127.0.0.1 - - [15/Apr/2025 03:17:08] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 03:17:08,510 - INFO - 127.0.0.1 - - [15/Apr/2025 03:17:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:17:08,519 - INFO - 127.0.0.1 - - [15/Apr/2025 03:17:08] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 03:17:29,776 - INFO - Connexion à la DB établie avec succès
+2025-04-15 03:17:29,797 - INFO - 127.0.0.1 - - [15/Apr/2025 03:17:29] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 03:17:29,832 - INFO - 127.0.0.1 - - [15/Apr/2025 03:17:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:20:50,933 - INFO - 127.0.0.1 - - [15/Apr/2025 03:20:50] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 03:20:50,980 - INFO - 127.0.0.1 - - [15/Apr/2025 03:20:50] "GET /static/style.css HTTP/1.1" 200 -
+2025-04-15 03:20:50,995 - INFO - 127.0.0.1 - - [15/Apr/2025 03:20:50] "[36mGET /static/image2.jpg HTTP/1.1[0m" 304 -
+2025-04-15 03:21:28,275 - INFO - 127.0.0.1 - - [15/Apr/2025 03:21:28] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 03:21:28,321 - INFO - 127.0.0.1 - - [15/Apr/2025 03:21:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:21:47,655 - INFO - Connexion à la DB établie avec succès
+2025-04-15 03:21:47,665 - INFO - 127.0.0.1 - - [15/Apr/2025 03:21:47] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 03:21:47,698 - INFO - 127.0.0.1 - - [15/Apr/2025 03:21:47] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:23:45,259 - INFO - 127.0.0.1 - - [15/Apr/2025 03:23:45] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 03:23:45,315 - INFO - 127.0.0.1 - - [15/Apr/2025 03:23:45] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:24:07,172 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:07] "[33mGET /login HTTP/1.1[0m" 404 -
+2025-04-15 03:24:11,910 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:11] "GET / HTTP/1.1" 200 -
+2025-04-15 03:24:11,940 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:11] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:24:11,954 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:11] "[33mGET /static/app.js HTTP/1.1[0m" 404 -
+2025-04-15 03:24:11,961 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:11] "[36mGET /static/store.png HTTP/1.1[0m" 304 -
+2025-04-15 03:24:14,986 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:14] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 03:24:15,018 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:15] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:24:21,231 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:21] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 03:24:21,261 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:24:23,101 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:23] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 03:24:23,134 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:24:34,143 - INFO - Connexion à la DB établie avec succès
+2025-04-15 03:24:34,145 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 03:24:34,147 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:34] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 03:24:34,191 - INFO - 127.0.0.1 - - [15/Apr/2025 03:24:34] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:25:13,393 - INFO - Connexion à la DB établie avec succès
+2025-04-15 03:25:13,396 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 03:25:13,402 - INFO - 127.0.0.1 - - [15/Apr/2025 03:25:13] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 03:25:13,439 - INFO - 127.0.0.1 - - [15/Apr/2025 03:25:13] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:25:19,859 - INFO - 127.0.0.1 - - [15/Apr/2025 03:25:19] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 03:25:23,700 - INFO - 127.0.0.1 - - [15/Apr/2025 03:25:23] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 03:25:23,729 - INFO - 127.0.0.1 - - [15/Apr/2025 03:25:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:25:40,845 - INFO - 127.0.0.1 - - [15/Apr/2025 03:25:40] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 03:25:40,876 - INFO - 127.0.0.1 - - [15/Apr/2025 03:25:40] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:34:01,776 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:01] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 03:34:01,815 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:34:14,187 - INFO - Connexion à la DB établie avec succès
+2025-04-15 03:34:14,198 - ERROR - Erreur SQL: (1146, "Table 'magasinenligne.utilisateurs' doesn't exist")
+2025-04-15 03:34:14,214 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:14] "POST /connexion HTTP/1.1" 200 -
+2025-04-15 03:34:14,249 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:14] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:34:18,077 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:18] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 03:34:23,326 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:23] "[32mGET /home HTTP/1.1[0m" 302 -
+2025-04-15 03:34:23,333 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:23] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 03:34:23,368 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:23] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:34:28,596 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:28] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 03:34:28,627 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:28] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:34:29,761 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:29] "GET /connexion?next=http://127.0.0.1:5000/home HTTP/1.1" 200 -
+2025-04-15 03:34:29,792 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:29] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:34:36,565 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:36] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 03:34:36,574 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:36] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 03:34:36,603 - INFO - 127.0.0.1 - - [15/Apr/2025 03:34:36] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:34:49,737 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-04-15 03:34:49,738 - INFO - [33mPress CTRL+C to quit[0m
+2025-04-15 03:34:49,743 - INFO -  * Restarting with stat
+2025-04-15 03:34:50,390 - WARNING -  * Debugger is active!
+2025-04-15 03:34:50,398 - INFO -  * Debugger PIN: 530-443-569
+2025-04-15 03:35:07,812 - INFO - 127.0.0.1 - - [15/Apr/2025 03:35:07] "GET / HTTP/1.1" 200 -
+2025-04-15 03:35:07,866 - INFO - 127.0.0.1 - - [15/Apr/2025 03:35:07] "[33mGET /static/app.js HTTP/1.1[0m" 404 -
+2025-04-15 03:35:08,054 - INFO - 127.0.0.1 - - [15/Apr/2025 03:35:08] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:35:08,062 - INFO - 127.0.0.1 - - [15/Apr/2025 03:35:08] "[36mGET /static/store.png HTTP/1.1[0m" 304 -
+2025-04-15 03:35:12,074 - INFO - 127.0.0.1 - - [15/Apr/2025 03:35:12] "GET /connexion HTTP/1.1" 200 -
+2025-04-15 03:35:12,113 - INFO - 127.0.0.1 - - [15/Apr/2025 03:35:12] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+2025-04-15 03:35:16,217 - INFO - 127.0.0.1 - - [15/Apr/2025 03:35:16] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 03:35:54,743 - INFO - 127.0.0.1 - - [15/Apr/2025 03:35:54] "POST /inscription HTTP/1.1" 200 -
+2025-04-15 03:38:02,700 - INFO - 127.0.0.1 - - [15/Apr/2025 03:38:02] "GET /inscription HTTP/1.1" 200 -
+2025-04-15 03:38:09,850 - INFO - 127.0.0.1 - - [15/Apr/2025 03:38:09] "[32mGET /produits HTTP/1.1[0m" 302 -
+2025-04-15 03:38:09,857 - INFO - 127.0.0.1 - - [15/Apr/2025 03:38:09] "GET /connexion?next=http://127.0.0.1:5000/produits HTTP/1.1" 200 -
+2025-04-15 03:38:09,892 - INFO - 127.0.0.1 - - [15/Apr/2025 03:38:09] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
