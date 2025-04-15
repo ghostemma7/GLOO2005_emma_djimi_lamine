@@ -212,12 +212,12 @@ FOR EACH ROW
 BEGIN
     DECLARE nmbVendeur INT;
  
-    -- Compter le nombre de tuples restants dans auditeurs pour cette personne
+    -- Compter le nombre de tuples restants dans Vendeurs pour cette personne
     SELECT COUNT(*) INTO nmbVendeur
     FROM Vendeurs
     WHERE id = OLD.id;
  
-    -- Si la personne n'a plus de tuples dans auditeurs, supprimer le tuple correspondant dans Utilisateurs
+    -- Si la personne n'a plus de tuples dans Vendeurs, supprimer le tuple correspondant dans Utilisateurs
     IF nmbVendeur = 0 THEN
         DELETE FROM Vendeur WHERE id = OLD.id;
     END IF;
@@ -232,12 +232,12 @@ FOR EACH ROW
 BEGIN
     DECLARE nmbProduits INT;
  
-    -- Compter le nombre de tuples restants dans auditeurs pour cette personne
+    -- Compter le nombre de tuples restants dans produits pour cette personne
     SELECT COUNT(*) INTO nmbProduits
     FROM Produits
     WHERE idProduits = OLD.idProduit;
  
-    -- Si la personne n'a plus de tuples dans auditeurs, supprimer le tuple correspondant dans Utilisateurs
+    -- Si la personne n'a plus de tuples dans produits, supprimer le tuple correspondant dans Utilisateurs
     IF nmbProduits = 0 THEN
         DELETE FROM Produits WHERE id = OLD.idProduit;
     END IF;
@@ -253,5 +253,5 @@ CREATE INDEX idx_jouets ON Jouets (nomJouets);
 -- Créer un index sur la colonne 'role' de la table 'Utilisateurs'
 CREATE INDEX idx_livre ON Livres (nomLivre);
 
--- Créer un index sur la colonne 'posseder' de la table 'Emissions'
+-- Créer un index sur la colonne 'posseder' de la table 'Utilisateurs'
 CREATE INDEX idx_user ON Utilisateurs (username);
