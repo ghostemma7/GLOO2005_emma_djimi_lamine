@@ -20,8 +20,8 @@ app.secret_key = "mag-2005"
 conn = pymysql.connect(
     host='localhost',
     user='root',
-    password='Ntd.197238b',
-    db='magasinenligne',
+    password='Al#amine8',
+    db='magasinenligne1',
     cursorclass=pymysql.cursors.DictCursor
 )
 
