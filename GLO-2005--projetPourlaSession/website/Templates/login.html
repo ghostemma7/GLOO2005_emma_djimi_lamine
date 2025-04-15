@@ -7,8 +7,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Connexion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
-<body>
+<body class="default-background">
     <h2>Connexion</h2>
     <form action="/login" method="post">
         <label for="username">Nom d'utilisateur:</label>

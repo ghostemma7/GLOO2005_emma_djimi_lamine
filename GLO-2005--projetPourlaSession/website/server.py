@@ -154,6 +154,7 @@ def register():
             flash(f"Erreur lors de l'inscription : {str(e)}")
 
     return render_template('register.html')
+    
 
 
 if __name__ == '__main__':

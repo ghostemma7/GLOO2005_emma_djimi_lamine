@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Ajouter un produit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
 </head>
-<body>
+<body class="default-background">
     <h2>Ajouter un produit</h2>
     <form action="/add_product" method="post">
         <label for="nomProduits">Nom du produit :</label>
