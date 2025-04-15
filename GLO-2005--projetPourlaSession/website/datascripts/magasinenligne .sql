@@ -189,27 +189,7 @@ BEGIN
 END //
  
 DELIMITER ;
- 
- 
-DELIMITER //
- 
-CREATE TRIGGER VerifierVendeurExistant
-BEFORE INSERT ON produits
-FOR EACH ROW
-BEGIN
-    DECLARE nombreVendeurs INT;
- 
-    SELECT COUNT(*) INTO nombreVendeurs
-    FROM Vendeurs
-    WHERE idVendeur = NEW.idProduit;
- 
-    IF nombreVendeurs = 0 THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Erreur : Le vendeur spécifié n''existe pas.';
-    END IF;
-END //
- 
-DELIMITER ;
+
  
 DELIMITER //
 CREATE TRIGGER EffaceVendeur
