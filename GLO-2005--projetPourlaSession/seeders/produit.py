@@ -21,21 +21,35 @@ def generate_produits(connection, nb_produits):
     produits_ids = []
     categories = ["Jouets", "Livres"]
     cursor = connection.cursor()
+
     for _ in range(nb_produits):
-        id_produit = random.randint(1000, 9999)
         nom_produit = fake.word().capitalize() + " " + random.choice(["Pro", "Max", "Plus", "Ultra", "X"])
         categorie = random.choice(categories)
         prix = round(random.uniform(5.0, 500.0), 2)
-        description = "wow cest un bon produit"
-        for cat in categories:
-            cursor.execute(f"INSERT INTO produits (idProduit, nomProduits, prixProduit, descriptions, idCommandes, role) " \
-                    f"VALUES ({id_produit}, '{nom_produit}', {prix}, '{description}', NULL, '{cat}');")
-            
-        produits_ids.append(id_produit)  # Ajout de l'ID à la liste
 
+        if categorie == "Jouets":
+            description = "jouet pour enfants"
+            is_jouet = True
+            is_livre = False
+        else:
+            description = "livre intéressant"
+            is_jouet = False
+            is_livre = True
+
+        cursor.execute(
+            "CALL InsertionProduits(%s, %s, %s, %s, %s)",
+            (nom_produit, prix, description, is_jouet, is_livre)
+        )
+
+        result = cursor.fetchone()
+        if result:
+            last_id = result["id"]  # ou result['id']
+            produits_ids.append(last_id)
+        else:
+            print("Aucun ID retourné pour produit :", nom_produit)
 
     connection.commit()
-    return produits_ids  # Retourne la liste des IDs
+    return produits_ids
 
 
 if __name__ == "__main__":

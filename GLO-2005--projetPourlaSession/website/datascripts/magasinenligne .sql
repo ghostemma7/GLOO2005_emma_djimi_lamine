@@ -4,31 +4,31 @@ USE magasinenligne;
 
 CREATE TABLE IF NOT EXISTS Utilisateurs (
     id int AUTO_INCREMENT PRIMARY KEY,
-    username VARCHAR(150) NOT NULL UNIQUE,
+    username VARCHAR(150) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
-    date_inscription date NOT NULL UNIQUE,
+    date_inscription date NOT NULL,
     password VARCHAR(150) NOT NULL,
     role VARCHAR(150) DEFAULT 'Utilisateur' NOT NULL
     );
 
 
 CREATE TABLE IF NOT EXISTS Clients (
-  idClient INT PRIMARY KEY,
-  username VARCHAR(150) NOT NULL UNIQUE,
+  id INT PRIMARY KEY,
+  username VARCHAR(150) NOT NULL,
   email VARCHAR(150) NOT NULL UNIQUE,
-  date_inscription date NOT NULL UNIQUE,
+  date_inscription date NOT NULL,
   password VARCHAR(150) NOT NULL,
-  FOREIGN KEY(idClient) REFERENCES Utilisateurs(id) ON DELETE CASCADE
+  FOREIGN KEY(id) REFERENCES Utilisateurs(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS Vendeurs (
-  idVendeur INT PRIMARY KEY,
-  username VARCHAR(150) NOT NULL UNIQUE,
+  id INT PRIMARY KEY,
+  username VARCHAR(150) NOT NULL,
   email VARCHAR(150) NOT NULL UNIQUE,
-  date_inscription date NOT NULL UNIQUE,
+  date_inscription date NOT NULL,
   numeroduVendeur INT NOT NULL UNIQUE,
   password VARCHAR(150) NOT NULL,
-  FOREIGN KEY(idVendeur) REFERENCES Utilisateurs(id) ON DELETE CASCADE
+  FOREIGN KEY(id) REFERENCES Utilisateurs(id) ON DELETE CASCADE
 );
 
 CREATE TABLE IF NOT EXISTS produits (
@@ -47,11 +47,11 @@ CREATE TABLE IF NOT EXISTS Commandes (
   Cout_total decimal(10, 0),
   Statut ENUM("Passer", "Pas_passer"),
   nombre_en_stock INT,
-  idClientS INT,
+  id INT,
   idCommandeS INT PRIMARY KEY,
   idProduit INT,
   FOREIGN KEY (idProduit) REFERENCES produits(idProduit),
-  FOREIGN KEY(idClientS) REFERENCES Clients(idClient) ON DELETE CASCADE
+  FOREIGN KEY(id) REFERENCES Clients(id) ON DELETE CASCADE
 );
 
 
@@ -84,9 +84,18 @@ CREATE TABLE IF NOT EXISTS Livres (
   FOREIGN KEY (idLivres) REFERENCES produits (idProduit)
 );
 
+CREATE TABLE IF NOT EXISTS lignedecommande(
+  idlignecommande int PRIMARY KEY,
+  idcommande int,
+  idproduit int,
+  nombreProduits int,
+  FOREIGN KEY (idcommande) REFERENCES Commandes (idCommandeS)
+  FOREIGN KEY (idproduit) REFERENCES produits (idproduit)
+  )
+
 DELIMITER //
 
-CREATE PROCEDURE InsertionUtilisateurr(
+CREATE PROCEDURE InsertionUtilisateurs(
     IN username_param VARCHAR(150),
     IN email_param VARCHAR(150),
     IN date_inscription_param DATE,
@@ -105,13 +114,13 @@ BEGIN
     SET user_id = LAST_INSERT_ID();
 
     IF is_client THEN
-        INSERT INTO Clients (idClient, username, email, date_inscription, password) 
+        INSERT INTO Clients (id, username, email, date_inscription, password) 
         VALUES (user_id, username_param, email_param, date_inscription_param, password_param);
         
         UPDATE Utilisateurs SET role = 'Client' WHERE id = user_id;
 
     ELSE
-        INSERT INTO Vendeurs (idClient, username, email, date_inscription, numeroduVendeur, password) 
+        INSERT INTO Vendeurs (id, username, email, date_inscription, numeroduVendeur, password) 
         VALUES (user_id, username_param, email_param, date_inscription_param, numero_param, password_param);
         
         UPDATE Utilisateurs SET role = 'Vendeur' WHERE id = user_id;
@@ -125,11 +134,10 @@ DELIMITER ;
 
 
 DELIMITER //
-CREATE PROCEDURE InsertionProduit(
+CREATE PROCEDURE InsertionProduits(
 	IN nomProduits_param varchar(100),
   IN prixProduit_param decimal(10, 2),
   IN descriptions_param text,
-  IN role_param VARCHAR(150),
   IN is_jouet BOOLEAN,
   IN is_livre BOOLEAN
 )
@@ -142,19 +150,20 @@ BEGIN
  
 	IF is_jouet THEN
      INSERT INTO Jouets (idJouets, nomJouets, prixJouet, descriptions) 
-     VALUES (nomProduits_param, prixProduit_param, descriptions_param);
+     VALUES (p_idProduit, nomProduits_param, prixProduit_param, descriptions_param);
      UPDATE Produits P SET P.role = 'Jouets' WHERE P.idProduit = p_idProduit;
 	ELSE
 	 INSERT INTO Livres (idLivres, nomLivre, prixLivre, descriptions) 
-     VALUES (nomProduits_param, prixProduit_param, descriptions_param);
+     VALUES (p_idProduit, nomProduits_param, prixProduit_param, descriptions_param);
      UPDATE Produits P SET P.role = 'Livres' WHERE P.idProduit = p_idProduit;
   END IF;
+
+  SELECT p_idProduit AS id;
 END // 
 
 DELIMITER ;
 
-DELIMITER //
-
+'''
 CREATE TRIGGER AugmenterNombreProduitApresInsertion
 AFTER INSERT ON produits
 FOR EACH ROW
@@ -190,26 +199,8 @@ END //
  
 DELIMITER ;
  
- 
-DELIMITER //
- 
-CREATE TRIGGER VerifierVendeurExistant
-BEFORE INSERT ON produits
-FOR EACH ROW
-BEGIN
-    DECLARE nombreVendeurs INT;
- 
-    SELECT COUNT(*) INTO nombreVendeurs
-    FROM Vendeurs
-    WHERE idVendeur = NEW.idProduit;
- 
-    IF nombreVendeurs = 0 THEN
-        SIGNAL SQLSTATE '45000'
-        SET MESSAGE_TEXT = 'Erreur : Le vendeur spécifié n''existe pas.';
-    END IF;
-END //
- 
-DELIMITER ;
+ '''
+
  
 DELIMITER //
 CREATE TRIGGER EffaceVendeur
@@ -221,11 +212,11 @@ BEGIN
     -- Compter le nombre de tuples restants dans auditeurs pour cette personne
     SELECT COUNT(*) INTO nmbVendeur
     FROM Vendeurs
-    WHERE idVendeur = OLD.idVendeur;
+    WHERE id = OLD.id;
  
     -- Si la personne n'a plus de tuples dans auditeurs, supprimer le tuple correspondant dans Utilisateurs
     IF nmbVendeur = 0 THEN
-        DELETE FROM Vendeur WHERE id = OLD.idVendeur;
+        DELETE FROM Vendeur WHERE id = OLD.id;
     END IF;
 END //;
 DELIMITER ;

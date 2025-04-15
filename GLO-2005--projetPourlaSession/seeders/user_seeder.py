@@ -2,6 +2,7 @@ from faker import Faker
 import random
 from werkzeug.security import generate_password_hash
 from produit import connection
+import uuid
 
 import random
 from faker import Faker
@@ -15,25 +16,34 @@ def generate_random_password(length=10):
 def generate_clients(connection, nb_clients):
     cursor = connection.cursor()
     clients_ids = []
+    used_emails = set()  # Pour s'assurer que les e-mails sont uniques
 
     for _ in range(nb_clients):
-        username = fake.last_name()  # chaîne de caractères
-        email = fake.email()
+        username = fake.last_name()
+        
+        # Génération d'un e-mail unique
+        email_base = username.lower()
+        email = f"{email_base}.{uuid.uuid4().hex[:8]}@example.com"
+        while email in used_emails:
+            email = f"{email_base}.{uuid.uuid4().hex[:8]}@example.com"
+        used_emails.add(email)
+
         date_transaction = fake.date_between(start_date="-1y", end_date="today")
         password = generate_random_password()
-        passeword_hash = generate_password_hash(password, method='pbkdf2:sha256')
+        password_hash = generate_password_hash(password, method='pbkdf2:sha256')
 
-        # Appel correct avec 7 paramètres
+        # Appel de la procédure stockée
         cursor.execute(
-            "CALL InsertionUtilisateurr(%s, %s, %s, %s, %s, %s, %s)",
-            (username, email, date_transaction, passeword_hash, None, True, False)
+            "CALL InsertionUtilisateurs(%s, %s, %s, %s, %s, %s, %s)",
+            (username, email, date_transaction, password_hash, None, True, False)
         )
+        
         result = cursor.fetchone()
         if result:
             last_id = result["id"]  # ou result['id'] si DictCursor
             clients_ids.append(last_id)
         else:
-            print(" Aucun ID retourné pour l'utilisateur :", username)
+            print("Aucun ID retourné pour l'utilisateur :", username)
 
     connection.commit()
     return clients_ids
@@ -42,28 +52,35 @@ def generate_clients(connection, nb_clients):
 def generate_vendeur(connection, nb_vendeurs):
     cursor = connection.cursor()
     vendeurs_ids = []
+    used_emails = set()  # Pour garantir unicité
 
     for _ in range(nb_vendeurs):
         username = fake.last_name()
-        email = fake.email()
+
+        # Génération d’un e-mail unique
+        email_base = username.lower()
+        email = f"{email_base}.{uuid.uuid4().hex[:8]}@example.com"
+        while email in used_emails:
+            email = f"{email_base}.{uuid.uuid4().hex[:8]}@example.com"
+        used_emails.add(email)
+
         numero = random.randint(1000, 9999)
         date_transaction = fake.date_between(start_date="-1y", end_date="today")
         password = generate_random_password()
-        passeword_hash = generate_password_hash(password, method='pbkdf2:sha256')
+        password_hash = generate_password_hash(password, method='pbkdf2:sha256')
 
-        # Appel de la procédure
+        # Appel de la procédure stockée
         cursor.execute(
-            "CALL InsertionUtilisateurr(%s, %s, %s, %s, %s, %s, %s)",
-            (username, email, date_transaction, passeword_hash, numero, False, True)
+            "CALL InsertionUtilisateurs(%s, %s, %s, %s, %s, %s, %s)",
+            (username, email, date_transaction, password_hash, numero, False, True)
         )
 
-        # Récupération du user_id retourné par la procédure
         result = cursor.fetchone()
         if result:
-            last_id = result["id"]  # ou result["id"] avec DictCursor
+            last_id = result["id"]
             vendeurs_ids.append(last_id)
         else:
-            print(" Aucun ID retourné pour le vendeur :", username)
+            print("Aucun ID retourné pour le vendeur :", username)
 
     connection.commit()
     return vendeurs_ids

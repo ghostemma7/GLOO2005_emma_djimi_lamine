@@ -14,12 +14,6 @@ load_dotenv()
 
 import os
 
-print("Host:", os.getenv("DB_HOST"))
-print("User:", os.getenv("DB_USERNAME"))
-print("Password:", os.getenv("DB_PASSWORD"))
-print("Database:", os.getenv("DB_DATABASE"))
-print("Port:", os.getenv("DB_PORT"))
-
 connection = pymysql.connect(
     host=os.getenv('DB_HOST'),
     user=os.getenv('DB_USERNAME'),
