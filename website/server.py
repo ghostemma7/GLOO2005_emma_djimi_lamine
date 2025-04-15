@@ -22,45 +22,68 @@ logging.basicConfig(
 )
 
 app = Flask(__name__)
-app.secret_key = os.getenv("SECRET_KEY")  # Clé secrète à définir dans le fichier .env
+app.secret_key = 'Ntd.197238b'
 
 # Connexion à la base de données
 def get_db_connection():
     try:
-        return pymysql.connect(
-            host=os.getenv("DB_HOST", "localhost"),
-            user=os.getenv("DB_USER", "root"),
-            password=os.getenv("DB_PASSWORD"),
-            db=os.getenv("DB_NAME", "magasinenligne"),
-            cursorclass=pymysql.cursors.DictCursor
+        conn = pymysql.connect(
+            host='localhost',
+            user='root',
+            password='Ntd.197238b',
+            database='magasinenligne',
+            port=3306,
+            cursorclass=pymysql.cursors.DictCursor,
+            autocommit=True
         )
-    except MySQLError as e:
-        logging.error(f"Erreur de connexion à la base de données: {e}")
+        logging.info("Connexion à la DB établie avec succès")
+        return conn
+    except pymysql.MySQLError as e:
+        logging.error(f"Échec de connexion à MySQL: Code {e.args[0]} - {e.args[1]}")
+        return None
+    except Exception as e:
+        logging.error(f"Erreur inattendue: {str(e)}")
         return None
 
-# Middleware de login
+# Décorateur pour vérifier la connexion
 def login_required(f):
     @wraps(f)
     def decorated_function(*args, **kwargs):
-        if 'username' not in session:
+        if 'user_id' not in session:
             flash("Veuillez vous connecter pour accéder à cette page.")
             return redirect(url_for('login', next=request.url))
         return f(*args, **kwargs)
     return decorated_function
 
+# Décorateur pour vérifier le rôle
+def role_required(role):
+    def decorator(f):
+        @wraps(f)
+        def decorated_function(*args, **kwargs):
+            if 'role' not in session or session['role'] != role:
+                flash("Accès refusé : permissions insuffisantes.")
+                return redirect(url_for('dashboard'))
+            return f(*args, **kwargs)
+        return decorated_function
+    return decorator
+
 @app.route('/')
-def index():
+def accueil():
     try:
         return render_template('index.html')
     except Exception as e:
-        logging.error(f"Erreur dans la route index: {str(e)}")
+        logging.error(f"Erreur dans la route accueil: {str(e)}")
         abort(500)
 
-@app.route('/login', methods=['GET', 'POST'])
+
+@app.route('/connexion', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
+
+        # Debug: Afficher les valeurs reçues
+        print(f"Tentative de connexion - Username: {username}, Password: {password}")
 
         if not username or not password:
             flash("Tous les champs sont obligatoires.")
@@ -73,38 +96,51 @@ def login():
 
         try:
             with conn.cursor() as cursor:
-                cursor.execute("SELECT * FROM Utilisateurs WHERE username=%s", (username,))
+                cursor.execute("SELECT * FROM Utilisateurs WHERE username = %s", (username,))
                 user = cursor.fetchone()
+                
+                # Debug: Afficher l'utilisateur trouvé
+                print(f"Utilisateur trouvé: {user}")
 
                 if user and check_password_hash(user['password'], password):
+                    # Initialisation de session CRITIQUE
+                    session['user_id'] = user['id']
                     session['username'] = user['username']
                     session['role'] = user['role']
-                    session['user_id'] = user['id']
-                    flash("Connexion réussie !")
-                    return redirect(url_for('dashboard'))
+                    session['logged_in'] = True  # Nouveau flag important
+                    
+                    # Debug: Confirmation session
+                    print(f"Session après login: {session}")
+
+                    flash("Connexion réussie !", 'success')
+                    return redirect(url_for('dashboard'))  # Redirection vers le dashboard
                 else:
-                    flash("Identifiants invalides.")
+                    flash("Identifiants incorrects.", 'danger')
         except MySQLError as e:
             logging.error(f"Erreur SQL: {str(e)}")
-            flash("Erreur lors de la connexion.")
+            flash("Erreur lors de la connexion.", 'danger')
         finally:
             conn.close()
 
     return render_template('login.html')
 
-@app.route('/logout')
+@app.route('/deconnexion')
 def logout():
     session.clear()
-    flash("Déconnexion réussie.")
-    return redirect(url_for('index'))
+    flash("Vous avez été déconnecté avec succès.")
+    return redirect(url_for('accueil'))
 
-@app.route('/dashboard')
+@app.route('/tableau-de-bord')
 @login_required
 def dashboard():
-    return render_template('dashboard.html', username=session['username'], role=session['role'])
+    return render_template('dashboard.html', 
+                         username=session['username'], 
+                         role=session['role'],
+                         vendeur_num=session.get('vendeur_num'))
 
 @app.route('/ajouter-produit', methods=['GET', 'POST'])
 @login_required
+@role_required('Vendeur')
 def ajouter_produit():
     if request.method == 'POST':
         nom = request.form.get('nom')
@@ -119,7 +155,7 @@ def ajouter_produit():
         try:
             prix = float(prix)
         except ValueError:
-            flash("Le prix doit être un nombre.")
+            flash("Le prix doit être un nombre valide.")
             return render_template('ajouter_produit.html')
 
         is_jouet = type_produit.lower() == 'jouet'
@@ -132,19 +168,155 @@ def ajouter_produit():
 
         try:
             with conn.cursor() as cursor:
-                # ⚠️ Assurez-vous que cette procédure stockée attend bien ces paramètres
-                cursor.callproc('InsertionProduit', [nom, prix, description, '', is_jouet, is_livre])
-            conn.commit()
-            flash("Produit ajouté avec succès !")
-            return redirect(url_for('dashboard'))
+                # Appel de la procédure stockée corrigée
+                cursor.callproc('InsertionProduit', [
+                    nom, 
+                    prix, 
+                    description, 
+                    type_produit.capitalize(), 
+                    is_jouet, 
+                    is_livre
+                ])
+                conn.commit()
+                
+                # Lier le produit au vendeur
+                cursor.execute("""
+                    INSERT INTO ProduitsVendeurs (idProduit, idVendeur) 
+                    VALUES (LAST_INSERT_ID(), %s)
+                """, (session['user_id'],))
+                conn.commit()
+                
+                flash("Produit ajouté avec succès !")
+                return redirect(url_for('mes_produits'))
         except MySQLError as e:
             conn.rollback()
             logging.error(f"Erreur SQL: {str(e)}")
-            flash("Erreur lors de l'ajout du produit.")
+            flash(f"Erreur lors de l'ajout du produit: {str(e)}")
         finally:
             conn.close()
 
     return render_template('ajouter_produit.html')
+
+@app.route('/mes-produits')
+@login_required
+@role_required('Vendeur')
+def mes_produits():
+    conn = get_db_connection()
+    if not conn:
+        abort(500)
+
+    try:
+        with conn.cursor() as cursor:
+            # Récupérer les produits du vendeur connecté
+            cursor.execute("""
+                SELECT p.* 
+                FROM produits p
+                JOIN ProduitsVendeurs pv ON p.idProduit = pv.idProduit
+                WHERE pv.idVendeur = %s
+            """, (session['user_id'],))
+            produits = cursor.fetchall()
+            
+            # Séparer les jouets et livres
+            jouets = []
+            livres = []
+            
+            for produit in produits:
+                if produit['role'] == 'Jouet':
+                    cursor.execute("SELECT * FROM Jouets WHERE idJouets = %s", (produit['idProduit'],))
+                    jouet = cursor.fetchone()
+                    if jouet:
+                        jouets.append({**produit, **jouet})
+                elif produit['role'] == 'Livre':
+                    cursor.execute("SELECT * FROM Livres WHERE idLivres = %s", (produit['idProduit'],))
+                    livre = cursor.fetchone()
+                    if livre:
+                        livres.append({**produit, **livre})
+            
+        return render_template('mes_produits.html', 
+                            jouets=jouets, 
+                            livres=livres)
+    except MySQLError as e:
+        logging.error(f"Erreur SQL: {str(e)}")
+        abort(500)
+    finally:
+        conn.close()
+
+@app.route('/inscription', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        # Debug: Affiche les données reçues
+        print("Données du formulaire:", request.form)
+        
+        username = request.form.get('username')
+        email = request.form.get('email')
+        password = request.form.get('password')
+        confirm_password = request.form.get('confirm_password')
+        role = request.form.get('role', 'Client')
+        numero_vendeur = request.form.get('numero_vendeur')
+
+        # Validation basique
+        if not all([username, email, password, confirm_password]):
+            flash("Tous les champs sont obligatoires", "error")
+            return render_template('register.html')
+
+        if password != confirm_password:
+            flash("Les mots de passe ne correspondent pas", "error")
+            return render_template('register.html')
+
+        if role == 'Vendeur' and not numero_vendeur:
+            flash("Le numéro de vendeur est obligatoire", "error")
+            return render_template('register.html')
+
+        # Connexion DB
+        conn = get_db_connection()
+        if not conn:
+            flash("Erreur de base de données", "error")
+            return render_template('register.html')
+
+        try:
+            with conn.cursor() as cursor:
+                # Vérifie si l'utilisateur existe déjà
+                cursor.execute("SELECT * FROM Utilisateurs WHERE username = %s OR email = %s", (username, email))
+                if cursor.fetchone():
+                    flash("Un utilisateur avec ce nom ou email existe déjà", "error")
+                    return render_template('register.html')
+
+                # Hash du mot de passe
+                hashed_pw = generate_password_hash(password)
+                
+                # Insertion
+                cursor.execute(
+                    "INSERT INTO Utilisateurs (username, email, password, role) VALUES (%s, %s, %s, %s)",
+                    (username, email, hashed_pw, role)
+                )
+                
+                # Insertion spécifique au rôle
+                user_id = cursor.lastrowid
+                if role == 'Vendeur':
+                    cursor.execute(
+                        "INSERT INTO Vendeurs (idVendeur, numeroduVendeur) VALUES (%s, %s)",
+                        (user_id, numero_vendeur)
+                    )
+                
+                conn.commit()
+                flash("Inscription réussie! Vous pouvez maintenant vous connecter", "success")
+                return redirect(url_for('login'))
+
+        except Exception as e:
+            conn.rollback()
+            print("Erreur lors de l'inscription:", str(e))
+            flash("Une erreur est survenue lors de l'inscription", "error")
+            return render_template('register.html')
+            
+        finally:
+            conn.close()
+
+    return render_template('register.html')
+
+@app.route('/home')
+@login_required
+def home():
+    return render_template('home.html')
 
 @app.route('/produits')
 @login_required
@@ -152,7 +324,7 @@ def produits():
     conn = get_db_connection()
     if not conn:
         abort(500)
-
+    
     try:
         with conn.cursor() as cursor:
             cursor.execute("SELECT * FROM produits")
@@ -160,100 +332,48 @@ def produits():
         return render_template('produits.html', produits=produits)
     finally:
         conn.close()
-
-@app.route('/livres')
-@login_required
-def livres():
-    conn = get_db_connection()
-    if not conn:
-        abort(500)
-
-    try:
-        with conn.cursor() as cursor:
-            cursor.execute("""
-                SELECT p.*, l.nomLivre, l.prixLivre, l.descriptions 
-                FROM produits p 
-                JOIN Livres l ON p.idProduit = l.idProduit
-            """)
-            livres = cursor.fetchall()
-        return render_template('livres.html', livres=livres)
-    finally:
-        conn.close()
-
-@app.route('/jouets')
-@login_required
-def jouets():
-    conn = get_db_connection()
-    if not conn:
-        abort(500)
-
-    try:
-        with conn.cursor() as cursor:
-            cursor.execute("""
-                SELECT p.*, j.nomJouets, j.prixJouet, j.descriptions 
-                FROM produits p 
-                JOIN Jouets j ON p.idProduit = j.idProduit
-            """)
-            jouets = cursor.fetchall()
-        return render_template('jouets.html', jouets=jouets)
-    finally:
-        conn.close()
-
-@app.route('/register', methods=['GET', 'POST'])
-def register():
-    if request.method == 'POST':
-        username = request.form.get('username')
-        email = request.form.get('email')
-        password = request.form.get('password')
-        confirm_password = request.form.get('confirm_password')
-        date_inscription = date.today()
-
-        if not all([username, email, password, confirm_password]):
-            flash("Tous les champs sont obligatoires.")
-            return render_template('register.html')
-
-        if password != confirm_password:
-            flash("Les mots de passe ne correspondent pas.")
-            return render_template('register.html')
-
-        hashed_password = generate_password_hash(password)
+        # Conversion en booléen pour la procédure stockée
+        is_jouet = categorie.lower() == 'jouet'
+        is_livre = categorie.lower() == 'livre'
 
         conn = get_db_connection()
         if not conn:
             flash("Erreur de connexion à la base de données.")
-            return render_template('register.html')
+            return render_template('add-product.html')
 
         try:
             with conn.cursor() as cursor:
-                cursor.execute("SELECT * FROM Utilisateurs WHERE username = %s OR email = %s", (username, email))
-                if cursor.fetchone():
-                    flash("Un utilisateur avec ce nom ou cet email existe déjà.")
-                    return render_template('register.html')
-
-                cursor.execute(
-                    "INSERT INTO Utilisateurs (username, email, password, date_inscription) VALUES (%s, %s, %s, %s)",
-                    (username, email, hashed_password, date_inscription)
-                )
-            conn.commit()
-            flash("Inscription réussie ! Vous pouvez vous connecter.")
-            return redirect(url_for('login'))
+                cursor.callproc('InsertionProduit', [
+                    nom, 
+                    prix, 
+                    description, 
+                    categorie.capitalize(), 
+                    is_jouet, 
+                    is_livre
+                ])
+                conn.commit()
+                flash("Produit ajouté avec succès !")
+                return redirect(url_for('produits'))
         except MySQLError as e:
             conn.rollback()
-            logging.error(f"Erreur SQL lors de l'inscription: {str(e)}")
-            flash("Erreur lors de l'inscription.")
+            logging.error(f"Erreur SQL: {str(e)}")
+            flash(f"Erreur lors de l'ajout du produit: {str(e)}")
         finally:
             conn.close()
 
-    return render_template('register.html')
+    return render_template('add-product.html')
 
 # Gestion des erreurs
+# Remplacer la fonction gestion_erreur existante par :
 @app.errorhandler(400)
 @app.errorhandler(401)
 @app.errorhandler(404)
 @app.errorhandler(500)
-def handle_error(error):
-    return render_template('error.html', error=error), error.code
-
-
+def gestion_erreur(error):
+    return f"""
+    <h1>{error.code} - {error.name}</h1>
+    <p>{error.description}</p>
+    <a href="{url_for('accueil')}">Retour à l'accueil</a>
+    """, error.code
 if __name__ == '__main__':
     app.run(debug=True)

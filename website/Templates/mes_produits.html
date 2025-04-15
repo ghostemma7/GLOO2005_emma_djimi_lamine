@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Mes Produits</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Mes Produits</h1>
+    
+    <h2>Jouets</h2>
+    {% if jouets %}
+        <ul>
+        {% for jouet in jouets %}
+            <li>
+                {{ jouet.nomProduits }} - {{ jouet.prixProduit }}€
+                <br>{{ jouet.descriptions }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun jouet enregistré</p>
+    {% endif %}
+
+    <h2>Livres</h2>
+    {% if livres %}
+        <ul>
+        {% for livre in livres %}
+            <li>
+                {{ livre.nomProduits }} - {{ livre.prixProduit }}€
+                <br>{{ livre.descriptions }}
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>Aucun livre enregistré</p>
+    {% endif %}
+
+    <a href="{{ url_for('dashboard') }}">Retour au tableau de bord</a>
+</body>
+</html>

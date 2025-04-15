@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajouter un Produit</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Ajouter un Nouveau Produit</h1>
+    
+    <form method="POST">
+        <label for="nom">Nom du produit:</label>
+        <input type="text" id="nom" name="nom" required>
+        
+        <label for="prix">Prix:</label>
+        <input type="number" step="0.01" id="prix" name="prix" required>
+        
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+        
+        <label>Type de produit:</label>
+        <select name="type" required>
+            <option value="jouet">Jouet</option>
+            <option value="livre">Livre</option>
+        </select>
+        
+        <button type="submit">Ajouter le produit</button>
+    </form>
+    
+    <a href="{{ url_for('dashboard') }}">Retour au tableau de bord</a>
+</body>
+</html>

@@ -1,40 +1,46 @@
---inscription--
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Liste des produits</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+    <title>Inscription</title>
 </head>
-<body class="default-background">
-    <h1>Nos Produits</h1>
-    
-    {% if produits %}
+<body>
+    <h1>Inscription</h1>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
         <ul>
-        {% for produit in produits %}
-            <li>
-                <strong>{{ produit['nomProduits'] }}</strong><br>
-                Prix : {{ produit['prixProduit'] }} €<br>
-                Description : {{ produit['descriptions'] }}<br>
-                Type : {{ produit['role'] }}<br>
-
-                {% if session['role'] == 'Client' %}
-                    <form action="/commander/{{ produit['idProduit'] }}" method="post" style="margin-top: 10px;">
-                        <label for="quantite">Quantité :</label>
-                        <input type="number" name="quantite" value="1" min="1" required>
-                        <input type="submit" value="Commander">
-                    </form>
-                {% endif %}
-            </li>
-            <hr>
-        {% endfor %}
+          {% for category, message in messages %}
+            <li class="{{ category }}">{{ message }}</li>
+          {% endfor %}
         </ul>
-    {% else %}
-        <p>Aucun produit disponible.</p>
-    {% endif %}
+      {% endif %}
+    {% endwith %}
 
-    <br><a href="/home">Retour à l’accueil</a>
+    <form method="post" action="{{ url_for('register') }}">
+        <label for="username">Nom d'utilisateur :</label><br>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="email">Adresse e-mail :</label><br>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="password">Mot de passe :</label><br>
+        <input type="password" id="password" name="password" required><br>
+
+        <label for="confirm_password">Confirmer le mot de passe :</label><br>
+        <input type="password" id="confirm_password" name="confirm_password" required><br>
+
+        <label for="role">Rôle :</label><br>
+        <select id="role" name="role">
+            <option value="Client" selected>Client</option>
+            <option value="Vendeur">Vendeur</option>
+        </select><br>
+
+        <label for="numero_vendeur">Numéro de vendeur (si Vendeur) :</label><br>
+        <input type="text" id="numero_vendeur" name="numero_vendeur"><br>
+
+        <input type="submit" value="S'inscrire">
+    </form>
+    <a href="{{ url_for('login') }}">Vous avez déjà un compte ? Se connecter</a>
 </body>
 </html>

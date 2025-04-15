@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Tableau de Bord</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Tableau de Bord</h1>
+    <p>Connecté en tant que <strong>{{ username }}</strong> ({{ role }})</p>
+    
+    {% if vendeur_num %}
+    <p>Votre numéro de vendeur : {{ vendeur_num }}</p>
+    {% endif %}
+
+    <nav>
+        <a href="{{ url_for('mes_produits') }}">Mes Produits</a>
+        <a href="{{ url_for('ajouter_produit') }}">Ajouter un Produit</a>
+        <a href="{{ url_for('logout') }}">Déconnexion</a>
+    </nav>
+</body>
+</html>

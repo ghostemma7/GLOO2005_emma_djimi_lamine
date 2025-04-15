@@ -8,7 +8,7 @@
 </head>
 <body class="default-background">
     <h2>Ajouter un produit</h2>
-    <form action="/add_product" method="post">
+    <form action="{{ url_for('add_product') }}" method="post">
         <label for="nomProduits">Nom du produit :</label>
         <input type="text" name="nomProduits" required><br><br>
 
@@ -25,6 +25,6 @@
         <input type="submit" value="Ajouter le produit">
     </form>
     <br>
-    <a href="/home">Retour à l’accueil</a>
+    <a href="{{ url_for('home') }}">Retour à l'accueil</a>
 </body>
 </html>

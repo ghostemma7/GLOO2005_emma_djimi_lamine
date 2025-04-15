@@ -1,7 +1,3 @@
---page de connexion--
-
---ajouter un livre ou produit--
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,19 +5,34 @@
     <title>Connexion</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
-<body class="default-background">
+<body>
     <h2>Connexion</h2>
-    <form action="/login" method="post">
-        <input type="hidden" name="next" value="{{ request.args.get('next') or '' }}">
+    
+    <!-- Afficher les messages flash -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for category, message in messages %}
+                    <div class="alert alert-{{ category }}">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <form action="{{ url_for('login') }}" method="post">
+        <div>
+            <label for="username">Nom d'utilisateur:</label>
+            <input type="text" id="username" name="username" required>
+        </div>
         
-        <label for="username">Nom d'utilisateur:</label>
-        <input type="text" id="username" name="username" required><br><br>
-
-        <label for="password">Mot de passe:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <input type="submit" value="Se connecter">
+        <div>
+            <label for="password">Mot de passe:</label>
+            <input type="password" id="password" name="password" required>
+        </div>
+        
+        <button type="submit">Se connecter</button>
     </form>
-    <p>Pas encore de compte ? <a href="/register">Inscrivez-vous</a></p>
+    
+    <p>Pas encore de compte ? <a href="{{ url_for('register') }}">S'inscrire</a></p>
 </body>
 </html>
