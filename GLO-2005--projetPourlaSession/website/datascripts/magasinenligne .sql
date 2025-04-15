@@ -1,9 +1,9 @@
-CREATE DATABASE IF NOT EXISTS magasinenligne1;
-use magasinenligne1;
+CREATE DATABASE IF NOT EXISTS magasinenligne;
+USE magasinenligne;
 
 
 CREATE TABLE IF NOT EXISTS Utilisateurs (
-    id INT AUTO_INCREMENT PRIMARY KEY,
+    id int AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(150) NOT NULL UNIQUE,
     email VARCHAR(150) NOT NULL UNIQUE,
     date_inscription date NOT NULL UNIQUE,
@@ -89,7 +89,7 @@ DELIMITER //
 CREATE PROCEDURE InsertionUtilisateurr(
     IN username_param VARCHAR(150),
     IN email_param VARCHAR(150),
-    IN date_inscription_param date,
+    IN date_inscription_param DATE,
     IN password_param VARCHAR(150),
     IN numero_param INT,
     IN is_client BOOLEAN,
@@ -97,19 +97,32 @@ CREATE PROCEDURE InsertionUtilisateurr(
 )
 BEGIN
     DECLARE user_id INT;
-    INSERT INTO Utilisateurs (username_param, email, date_inscription, password) 
+
+    -- Insertion dans la table Utilisateurs
+    INSERT INTO Utilisateurs (username, email, date_inscription, password) 
     VALUES (username_param, email_param, date_inscription_param, password_param);
+
     SET user_id = LAST_INSERT_ID();
+
     IF is_client THEN
-    INSERT INTO Clients (idClient, username, email, date_inscription, password) VALUES (user_id, username_param, email_param, date_inscription, password_param);
-    UPDATE Utilisateurs U SET U.role = 'Client' WHERE U.id = user_id;
-    
+        INSERT INTO Clients (idClient, username, email, date_inscription, password) 
+        VALUES (user_id, username_param, email_param, date_inscription_param, password_param);
+        
+        UPDATE Utilisateurs SET role = 'Client' WHERE id = user_id;
+
     ELSE
-        INSERT INTO Vendeurs (idClient, username, email, date_inscription, numeroduVendeur, password) VALUES (user_id, username_param, email_param, date_inscription_param, numero_param, password_param);
-        UPDATE Utilisateurs U SET U.role = 'vendeur' WHERE U.id = user_id;
+        INSERT INTO Vendeurs (idClient, username, email, date_inscription, numeroduVendeur, password) 
+        VALUES (user_id, username_param, email_param, date_inscription_param, numero_param, password_param);
+        
+        UPDATE Utilisateurs SET role = 'Vendeur' WHERE id = user_id;
     END IF;
-END//;
+
+    SELECT user_id AS id;
+
+END //
+
 DELIMITER ;
+
 
 DELIMITER //
 CREATE PROCEDURE InsertionProduit(
@@ -136,7 +149,7 @@ BEGIN
      VALUES (nomProduits_param, prixProduit_param, descriptions_param);
      UPDATE Produits P SET P.role = 'Livres' WHERE P.idProduit = p_idProduit;
   END IF;
-END //; 
+END // 
 
 DELIMITER ;
 

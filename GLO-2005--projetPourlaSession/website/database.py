@@ -12,6 +12,14 @@ from flask import json
 
 load_dotenv()
 
+import os
+
+print("Host:", os.getenv("DB_HOST"))
+print("User:", os.getenv("DB_USERNAME"))
+print("Password:", os.getenv("DB_PASSWORD"))
+print("Database:", os.getenv("DB_DATABASE"))
+print("Port:", os.getenv("DB_PORT"))
+
 connection = pymysql.connect(
     host=os.getenv('DB_HOST'),
     user=os.getenv('DB_USERNAME'),
@@ -41,13 +49,13 @@ def insert_Utilisateurs(username, email, date_inscription, password, role='User'
     cursor.execute(query, (username, password, email, role))
 
 def select_user():
-    request = "SELECT id, username, email, date_inscription, role FROM magasinenligne1.Utilisateurs;"
+    request = "SELECT id, username, email, date_inscription, role FROM magasinenligne.Utilisateurs;"
     cursor.execute(request)
     utilisateurs = cursor.fetchall()
     return utilisateurs
 
 def select_livre():
-    request = "SELECT idLivres, nomLivre, prixLivre, descriptions FROM magasinenligne1.Livres;"
+    request = "SELECT idLivres, nomLivre, prixLivre, descriptions FROM magasinenligne.Livres;"
     cursor.execute(request)
     livre = cursor.fetchall()
     return livre
@@ -59,7 +67,7 @@ def select_Livre_by_id(Livre_id):
     return Jouet_data
 
 def select_Jouets():
-    request = "SELECT idJouets, nomJouets, prixJouet, descriptions FROM magasinenligne1.Jouets;"
+    request = "SELECT idJouets, nomJouets, prixJouet, descriptions FROM magasinenligne.Jouets;"
     cursor.execute(request)
     livre = cursor.fetchall()
     return livre

@@ -8,33 +8,42 @@ from faker import Faker
 
 fake = Faker()
 
-def generate_random_password():
-    return ''.join(random.choices("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*()_+", k=10))
-
+def generate_random_password(length=10):
+    characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    return ''.join(random.choices(characters, k=length))
 
 def generate_clients(connection, nb_clients):
     cursor = connection.cursor()
     clients_ids = []
+
     for _ in range(nb_clients):
-        id_client = random.randint(1000, 9999)
-        username = fake.last_name()
+        username = fake.last_name()  # chaîne de caractères
         email = fake.email()
         date_transaction = fake.date_between(start_date="-1y", end_date="today")
         password = generate_random_password()
         passeword_hash = generate_password_hash(password, method='pbkdf2:sha256')
 
-        cursor.execute("CALL InsertionUtilisateurr  (%s, %s, %s, %s, NULL, TRUE, FALSE)",
-                        (username, email, date_transaction, passeword_hash))
-        
-        clients_ids.append(id_client)  # Ajout de l'ID à la liste
-    
-    connection.commit()
-    return clients_ids  # Retourne la liste des IDs
+        # Appel correct avec 7 paramètres
+        cursor.execute(
+            "CALL InsertionUtilisateurr(%s, %s, %s, %s, %s, %s, %s)",
+            (username, email, date_transaction, passeword_hash, None, True, False)
+        )
+        result = cursor.fetchone()
+        if result:
+            last_id = result["id"]  # ou result['id'] si DictCursor
+            clients_ids.append(last_id)
+        else:
+            print(" Aucun ID retourné pour l'utilisateur :", username)
 
-def generate_vendeur(connection, nb_clients):
+    connection.commit()
+    return clients_ids
+
+
+def generate_vendeur(connection, nb_vendeurs):
     cursor = connection.cursor()
-    clients_ids = []
-    for _ in range(nb_clients):
+    vendeurs_ids = []
+
+    for _ in range(nb_vendeurs):
         username = fake.last_name()
         email = fake.email()
         numero = random.randint(1000, 9999)
@@ -42,12 +51,22 @@ def generate_vendeur(connection, nb_clients):
         password = generate_random_password()
         passeword_hash = generate_password_hash(password, method='pbkdf2:sha256')
 
-        cursor.execute("CALL InsertionUtilisateurr  (%s, %s, %s, %s, %s, FALSE, TRUE)",
-                        (username, email, date_transaction, passeword_hash, numero))
-    
+        # Appel de la procédure
+        cursor.execute(
+            "CALL InsertionUtilisateurr(%s, %s, %s, %s, %s, %s, %s)",
+            (username, email, date_transaction, passeword_hash, numero, False, True)
+        )
+
+        # Récupération du user_id retourné par la procédure
+        result = cursor.fetchone()
+        if result:
+            last_id = result["id"]  # ou result["id"] avec DictCursor
+            vendeurs_ids.append(last_id)
+        else:
+            print(" Aucun ID retourné pour le vendeur :", username)
+
     connection.commit()
-
-
+    return vendeurs_ids
 
 if __name__ == "__main__":
     generate_clients(connection, 150)

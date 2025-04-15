@@ -26,10 +26,11 @@ def generate_produits(connection, nb_produits):
         nom_produit = fake.word().capitalize() + " " + random.choice(["Pro", "Max", "Plus", "Ultra", "X"])
         categorie = random.choice(categories)
         prix = round(random.uniform(5.0, 500.0), 2)
-
-        cursor.execute(f"INSERT INTO produits (id, nom, categorie, prix) " \
-                f"VALUES ({id_produit}, '{nom_produit}', '{categorie}', {prix});")
-        
+        description = "wow cest un bon produit"
+        for cat in categories:
+            cursor.execute(f"INSERT INTO produits (idProduit, nomProduits, prixProduit, descriptions, idCommandes, role) " \
+                    f"VALUES ({id_produit}, '{nom_produit}', {prix}, '{description}', NULL, '{cat}');")
+            
         produits_ids.append(id_produit)  # Ajout de l'ID à la liste
 
 
